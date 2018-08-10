@@ -1,0 +1,261 @@
+body {
+	background-color: black;
+	margin: 0 0 8px 0;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 84%;
+	padding: 0 8% 0 8%;
+	
+	z-index: 1000;
+	background-color: #e5e4e3;
+}
+
+p {
+	color: white;
+}
+
+#navbar-header {
+	color: black;
+	float: left;
+	
+	height: 1em;
+	margin: 12px 0 12px 0;
+
+	font-size: 20pt;
+	font-weight: 550;
+}
+
+#navbar-header:hover {
+	color: green;
+	opacity: 0.75;
+}
+
+#navbar-buttons {
+	color: black;
+	float: right;
+
+	height: 1em;
+	margin: 16.5px 0 16.5px 30px;
+
+	font-size: 13pt;
+	font-weight: 550;
+}
+
+#navbar-buttons:hover {
+	color: green;
+	opacity: 0.75;
+}
+
+#title {
+	margin: 50px 8% 0 8%;
+	height: 30%;
+
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 1px;
+}
+
+#titleLbl {
+	width: 40%;
+	height: 1.25em;
+	float: left;
+
+	vertical-align: middle;
+	text-align: left;
+	color: white;
+
+	font-size: 40pt;
+	display: inline-block;
+}
+
+#recommendations-container {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 60%;
+}
+
+#recommendations {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+
+	width: 94.5%;
+	margin-left: 5%;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	overflow: auto;
+	vertical-align: middle;
+}
+
+#recommendationsPic {
+	height: auto;
+	width: 20%;
+	margin: 2.5% 2.5% 2.5% 2.5%;
+	float: left;
+	vertical-align: middle;
+}
+
+#recommendationTxt {
+	display: inline-block;
+	width: 73%;
+	
+	vertical-align: top;
+	text-align: left;
+
+	font-size: 18pt;
+	margin-top: 2.5%;
+	margin-bottom: 0;
+}
+
+#recommendationTxt a {
+	font-size: 14pt;
+	color: white;
+}
+
+#name {
+	font-size: 16pt;
+	margin-bottom: 0;
+}
+
+.experience-cover {
+	margin: 2% 8% 0 8%;
+	height: 50%;
+	overflow: auto;
+}
+
+.lbl {
+	color: white;
+	font-size: 20pt;
+	text-align: center;
+	width: 100%;
+}
+
+#logosArea {
+	width: 100%;
+}
+
+.jobArea {
+	width: 24.5%;
+	display: inline-block;
+	margin: 1px;
+}
+
+.jobLogo {
+	width: 60%;
+	display: block;
+	margin: auto;
+	
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.jobArea figure {
+	position: relative;
+	height: 50%;
+}
+
+.jobArea figcaption {
+	color: white;
+	text-align: center;
+}
+
+.jobArea:hover {
+	margin: -2px;
+
+	border-width: 3px;
+	border-style: solid;
+	border-color: white;
+
+	cursor: pointer;
+}
+
+.projects-cover {
+	width: 84%;
+	padding-top: 2%;
+	margin: 1% 8% 0 8%;
+	overflow: hidden;
+
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: white;
+}
+
+.projects-cover h2 {
+	margin-bottom: 5%;
+}
+
+.project-area {
+	position: relative;
+	width: 49.8%;
+	margin-bottom: 10%;
+	display: inline-block;
+}
+
+.project-area img {
+	width: 100%;
+	display: block;
+	margin: auto;
+
+	transition: 0.3s;
+}
+
+.picCover {
+	position: absolute;
+	top: 0;
+	left: 0%;
+	background-color: rgba(255, 255, 255, 1);
+
+	width: 100%;
+	height: 100%;
+
+	text-align: center;
+
+	transform: translate(-100%);
+	transition: 0.3s;
+}
+
+.picCover h1 {
+	background-color: green;
+	color: black;
+}
+
+.picCover p {
+	color: black;
+}
+
+.picCover button {
+	display: inline-block;
+	background-color: green;
+	color: white;
+	height: 30px;
+	border-radius: 10%;
+}
+
+.picCover:hover {
+	left: 0;
+}
+
+.picCover:hover ~ .projectImg {
+	left: 100%;
+}
+
+.projectDescArea {
+	overflow: hidden;
+	width: 55%;
+	margin: auto;
+	position: relative;
+}
+
+button {
+	cursor: pointer;
+}
+
