@@ -161,13 +161,14 @@ a {
 #internships {
 	margin: 0 10% 0 10%;
 	width: 80%;
-	float: left;
+
+	display: table;
 }
 
 #experiencePage h5 {
 	color: black;
 	font-size: 40pt;
-	margin-bottom: 0;
+	margin-bottom: 3%;
 
 	font-family: "Montserrat";
 	font-weight: 400;
@@ -176,30 +177,69 @@ a {
 }
 
 #experiencePage h4 {
-	font-family: "Raleway";
-	font-weight: bold;
+	font-family: "Montserrat";
+	font-weight: 200;
 	font-size: 20pt;
 }
 
-#experiencePage h2 {
-	display: inline-block;
+#internshipsTbl {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#internshipsTbl td {
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	height: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.logoCol {
+	width: 20%;
+	height: 100%;
+	vertical-align: middle;
+
+	border-left: 1px solid #dddddd;
+	text-align: center;
 }
 
 #sap-logo {
-	height: 40px;
-	display: inline-block;
+	width: 45%;
+	padding: 2% 0 2% 0;
 }
 
-.internshipTitle {
-	display: inline-block;
+#linamar-logo {
+	width: 28%;
 }
 
-.internshipTitle h2 {
-	display: block;
+#gm-logo {
+	width: 24%;
 }
 
-.internshipRow {
-	padding: 0 2% 0 2%;
-	width: 100%;
-	display: block;
+#llc-logo{
+	width: 33%;
+}
+
+#kumon-logo {
+	width: 60%;
+	padding: 5% 0 5% 0;
+}
+
+.datesCol {
+	text-align: right;
+	border-right: 1px solid #dddddd;
+
+	font-family: "Raleway";
+	font-weight: bold;
+	font-size: 15pt;
+	text-align: center;
+	width: 30%;
+}
+
+.jobCol {
+	font-family: "Raleway";
+	font-weight: bold;
+	font-size: 15pt;
+	width: 50%;
 }

@@ -1,28 +1,80 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 </head>
 
-<body> 
-	<div class="titleText">
-		<h5>Subhan Altaf</h5>
-		<h3>Mechatronics Engineering Student at University of Waterloo</h3>
-		<hr/>
-		<div class="iconBtns">
-			<figure>
-				<a href="experience.html"><img src="resources/resumeIcon.png" alt="Resume Icon" id="resumePic"></a>
-				<a href="experience.html"><figcaption>RESUME</figcaption></a>
-			</figure>
-			<figure>
-				<a href="experience.html"><img src="resources/experienceIcon.png" alt="Experience Icon" id="experiencePic"></a>
-				<a href="experience.html"><figcaption>EXPERIENCE</figcaption></a>
-			</figure>
-			<figure>
-				<a href="experience.html"><img src="resources/aboutMeIcon.png" alt="About Me Icon" id="aboutMePic"></a>
-				<a href="experience.html"><figcaption>ABOUT ME</figcaption></a>
-			</figure>
+<body>
+	<nav id="navbar">
+		<a href="index.html"><h1 id="navbar-header">Subhan Altaf</h1></a>
+		<a href="aboutMe.html"><h2 id="navbar-buttons">About Me</h2></a>
+		<a href="resources/resume_2A.pdf"><h2 id="navbar-buttons">Resume</h2></a>
+		<a href="#"><h2 id="navbar-buttons">Experience</h2></a>
+	</nav>
+
+	<section id="homePage">
+		<div class="titleText">
+			<h5>M. Subhan Altaf</h5>
+			<h3>Mechatronics Engineering Student at University of Waterloo</h3>
+			<hr/>
+			<div class="iconBtns">
+				<figure>
+					<a href="experience.html"><img src="resources/experienceIcon.png" alt="Experience Icon" id="experiencePic"></a>
+					<a href="experience.html"><figcaption>EXPERIENCE</figcaption></a>
+				</figure>
+				<figure>
+					<a href="experience.html"><img src="resources/resumeIcon.png" alt="Resume Icon" id="resumePic"></a>
+					<a href="experience.html"><figcaption>RESUME</figcaption></a>
+				</figure>
+				<figure>
+					<a href="experience.html"><img src="resources/aboutMeIcon.png" alt="About Me Icon" id="aboutMePic"></a>
+					<a href="experience.html"><figcaption>ABOUT ME</figcaption></a>
+				</figure>
+			</div>
 		</div>
-	</div>
-	<div class="titleImage">
-		<img src="resources/homePic.jpg" id="homeScreenImg" alt="Subhan Altaf">
-	</div>
+		<div class="titleImage">
+			<img src="resources/homePic.jpg" id="homeScreenImg" alt="Subhan Altaf">
+		</div>
+	</section>
+
+	<section id="experiencePage">
+
+		<div id="title">
+			<h5 id="titleLbl">Experience</h5>
+		</div>
+		<div id="internships">
+			<h4>Internships</h4>
+			<table id="internshipsTbl">
+				<tr>
+					<td class="logoCol"><img id="sap-logo" src="resources/SAP-Logo.png"></td>
+					<td class="jobCol">Product Management Intern | SAP HANA</td>
+					<td class="datesCol">May 2018 to Aug 2018</td>
+				</tr>
+				<tr>
+					<td class="logoCol"><img id="linamar-logo" src="resources/linamar2.png"></td>
+					<td class="jobCol">Manufacturing Engineering Intern | Linamar</td>
+					<td class="datesCol">Sep 2017 to Dec 2017</td>
+				</tr>
+				<tr>
+					<td class="logoCol"><img id="gm-logo" src="resources/gm.png"></td>
+					<td class="jobCol">Innovation Specialist | General Motors</td>
+					<td class="datesCol">Jan 2017 to Apr 2017</td>
+				</tr>
+			</table>
+			<h4>Other Work Experience</h4>
+			<table id="internshipsTbl">
+				<tr>
+					<td class="logoCol"><img id="llc-logo" src="resources/uw_llc.jpg"></td>
+					<td class="jobCol">Engineering Peer Leader | Living-Learning Community</td>
+					<td class="datesCol">Sep 2017 to Dec 2017</td>
+				</tr>
+				<tr>
+					<td class="logoCol"><img id="kumon-logo" src="resources/kumon-bm-logo.png"></td>
+					<td class="jobCol">Math and Reading Tutor | Kumon</td>
+					<td class="datesCol">Nov 2014 to Aug 2016</td>
+				</tr>
+			</table>
+			<p></p>
+		</div>
+	</section>
 </body>
