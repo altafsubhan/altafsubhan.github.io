@@ -1,28 +1,76 @@
 body {
+	margin: 0;
+}
+
+#homePage {
 	background-color: black;
-	margin-bottom: 0;
+}
+
+#navbar {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 84%;
+	padding: 0 8% 0 8%;
+	
+	z-index: 1000;
+	background-color: #e5e4e3;
+}
+
+#navbar-header {
+	color: black;
+	float: left;
+	
+	height: 1em;
+	margin: 12px 0 12px 0;
+
+	font-size: 20pt;
+	font-weight: 550;
+}
+
+#navbar-header:hover {
+	color: green;
+	opacity: 0.75;
+}
+
+#navbar-buttons {
+	color: black;
+	float: right;
+
+	height: 1em;
+	margin: 16.5px 0 16.5px 30px;
+
+	font-size: 13pt;
+	font-weight: 550;
+}
+
+#navbar-buttons:hover {
+	color: green;
+	opacity: 0.75;
 }
 
 @font-face {
 	font-family: "Montserrat";
-	src: url(./Fonts/montserrat/Montserrat-Regular.otf);
+	src: url(../Fonts/montserrat/Montserrat-Regular.otf);
 }
 
 @font-face {
 	font-family: "Raleway";
-	src: url(./Fonts/raleway/Raleway-Regular.ttf);
+	src: url(../Fonts/raleway/Raleway-Regular.ttf);
 }
 
-h5 {
+#homePage h5 {
 	color: white;
 	font-size: 65pt;
 	margin-bottom: 0;
 
 	font-family: "Montserrat";
-	font-weight: 600;
+	font-weight: 500;
 }
 
-h3 {
+#homePage h3 {
 	color: white;
 	font-size: 19pt;
 
@@ -108,4 +156,50 @@ a {
 
 .iconBtns figure:hover {
 	opacity: 0.7;
+}
+
+#internships {
+	margin: 0 10% 0 10%;
+	width: 80%;
+	float: left;
+}
+
+#experiencePage h5 {
+	color: black;
+	font-size: 40pt;
+	margin-bottom: 0;
+
+	font-family: "Montserrat";
+	font-weight: 400;
+
+	text-align: center;
+}
+
+#experiencePage h4 {
+	font-family: "Raleway";
+	font-weight: bold;
+	font-size: 20pt;
+}
+
+#experiencePage h2 {
+	display: inline-block;
+}
+
+#sap-logo {
+	height: 40px;
+	display: inline-block;
+}
+
+.internshipTitle {
+	display: inline-block;
+}
+
+.internshipTitle h2 {
+	display: block;
+}
+
+.internshipRow {
+	padding: 0 2% 0 2%;
+	width: 100%;
+	display: block;
 }
