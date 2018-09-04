@@ -17,6 +17,7 @@ body {
 	
 	z-index: 1000;
 	background-color: #e5e4e3;
+	opacity: 0.95;
 }
 
 #navbar-header {
@@ -26,8 +27,9 @@ body {
 	height: 1em;
 	margin: 12px 0 12px 0;
 
-	font-size: 20pt;
-	font-weight: 550;
+	font-family: "Montserrat";
+	font-size: 18pt;
+	font-weight: 500;
 }
 
 #navbar-header:hover {
@@ -42,8 +44,9 @@ body {
 	height: 1em;
 	margin: 16.5px 0 16.5px 30px;
 
-	font-size: 13pt;
-	font-weight: 550;
+	font-family: "Montserrat";
+	font-size: 12pt;
+	font-weight: 500;
 }
 
 #navbar-buttons:hover {
@@ -158,8 +161,8 @@ a {
 	opacity: 0.7;
 }
 
-#internships {
-	margin: 0 10% 0 10%;
+#internships, #otherExperience, #hackathons, #projects {
+	margin: 2.5% 10% 2.5% 10%;
 	width: 80%;
 
 	display: table;
@@ -182,7 +185,7 @@ a {
 	font-size: 20pt;
 }
 
-#internshipsTbl {
+#internshipsTbl, #hackathonsTbl, #projectsTbl {
 	width: 100%;
 	border-collapse: collapse;
 }
@@ -242,4 +245,13 @@ a {
 	font-weight: bold;
 	font-size: 15pt;
 	width: 50%;
+}
+
+.hackathonProject, .project {
+	width: 25%;
+	text-align: center;
+}
+
+.hackathonProject img, .project img {
+	width: 90%;
 }
