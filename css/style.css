@@ -66,7 +66,7 @@ body {
 
 #homePage h5 {
 	color: white;
-	font-size: 65pt;
+	font-size: 55pt;
 	margin-bottom: 0;
 
 	font-family: "Montserrat";
@@ -198,6 +198,11 @@ a {
 	padding-bottom: 1%;
 }
 
+.experienceRow:hover {
+	background-color: #e5e4e3;
+	cursor: pointer;
+}
+
 .logoCol {
 	width: 20%;
 	height: 100%;
@@ -229,6 +234,10 @@ a {
 	padding: 5% 0 5% 0;
 }
 
+#uwaft-logo {
+	width: 38%;
+}
+
 .datesCol {
 	text-align: right;
 	border-right: 1px solid #dddddd;
@@ -254,4 +263,17 @@ a {
 
 .hackathonProject img, .project img {
 	width: 90%;
+}
+
+.hackathonProject img:hover, .project img:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+#scroll-down-pointer {
+	width: 8%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
 }
