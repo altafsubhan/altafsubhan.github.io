@@ -33,7 +33,7 @@ body {
 }
 
 #navbar-header:hover {
-	color: green;
+	color: #1EA919;
 	opacity: 0.75;
 }
 
@@ -259,6 +259,7 @@ a {
 .hackathonProject, .project {
 	width: 25%;
 	text-align: center;
+	position: relative;
 }
 
 .hackathonProject img, .project img {
@@ -270,12 +271,20 @@ a {
 	opacity: 0.9;
 }
 
+.projectTitle:hover {
+	cursor: pointer;
+}
+
 #scroll-down-pointer {
 	width: 8%;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	visibility: hidden;
+}
+
+#projectModal {
+	text-align: center;
 }
 
 .modal {
@@ -292,21 +301,21 @@ a {
 
 .modal-content {
 	background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
 }
 
-.close {
+.close, .projectClose {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .projectClose:hover,
+.close:focus, .projectClose:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -317,7 +326,7 @@ a {
 	text-align: center;
 }
 
-.modalTitle {
+.modalTitle, .projectModalTitle {
 	vertical-align: bottom;
 	font-family: "Montserrat";
 	font-size: 30px;
@@ -328,4 +337,68 @@ a {
 	vertical-align: top;
 	font-family: "Raleway";
 	font-size: 25px;
+}
+
+#winnerOverlay {
+	position: absolute;
+	left: 1.9%;
+	top: -3%;
+	width: 40%;
+}
+
+.projectTitle {
+	background-color: #1EA919;
+	position: absolute;
+	left: 10%;
+	bottom: 4%;
+
+	font-family: "Avenir";
+	font-size: 1em;
+	font-weight: bold;
+	color: black;
+
+	width: 80%;
+	padding: 2.5% 0 2.5% 0;
+}
+
+.gallery, .projectGallery {
+	display: none;
+	width: 60%;
+	margin: auto;
+}
+
+.gallery img, .gallery iframe, .projectGallery img, .projectGallery iframe {
+	width: 100%;
+	padding-top: 5%;
+}
+
+.contentHTML, .projectContentHTML {
+	display: none;
+	width: 80%;
+	margin: 3% auto;
+	text-align: left;
+
+	font-family: "Avenir";
+}
+
+.contentHTML a {
+	text-decoration: underline;
+}
+
+.awardContainer {
+	position: absolute;
+	top: 10%;
+	right: 7%;
+	width: 60%;
+	overflow: auto;
+
+	font-family: "Avenir";
+	font-size: 0.9em;
+
+	background-color: #FFC207;
+	color: white;
+	padding: 2%;
+
+	display: none;
+	z-index: 10;
 }

@@ -28,8 +28,8 @@
 					<a href="resources/resume_2B.pdf"><figcaption>RESUME</figcaption></a>
 				</figure>
 				<figure>
-					<a href="#"><img src="resources/aboutMeIcon.png" alt="About Me Icon" id="aboutMePic"></a>
-					<a href="#"><figcaption>ABOUT ME</figcaption></a>
+					<a href="javascript:alert('Coming soon!');"><img src="resources/aboutMeIcon.png" alt="About Me Icon" id="aboutMePic"></a>
+					<a href="javascript:alert('Coming soon!');"><figcaption>ABOUT ME</figcaption></a>
 				</figure>
 			</div>
 		</div>
@@ -90,10 +90,42 @@
 			<h4>Hackathon Projects</h4>
 			<table id="hackathonsTbl">
 				<tr>
-					<td class="hackathonProject"><img src="resources/tango.jpg"></td>
-					<td class="hackathonProject"><img src="resources/anxietyBot.jpg"></td>
-					<td class="hackathonProject"><img src="resources/blokit.jpg"></td>
-					<td class="hackathonProject"><img src="resources/intelihelm.jpg"></td>
+					<td id="tango" class="hackathonProject">
+						<a href="https://devpost.com/software/tango" target="_blank">
+							<img src="resources/tango.jpg">
+							<img id="winnerOverlay" src="resources/winner-ribbon.png">
+							<div class="projectTitle">IoT MEDICAL ASSISTANT</div>
+							<div id="tangoAward" class="awardContainer">
+								<strong>3rd Place at McHacks 2018</strong>
+							</div>
+						</a>
+					</td>
+					<td id="anxietyBot" class="hackathonProject">
+						<a href="https://devpost.com/software/anxietybot-4zgfkv" target="_blank">
+							<img src="resources/anxietyBot.jpg">
+							<img id="winnerOverlay" src="resources/winner-ribbon.png">
+							<div class="projectTitle">ANXIETYBOT</div>
+							<div id="anxietyBotAward" class="awardContainer">
+								<strong>Best Use of Encryption at HackNY 2018</strong>
+							</div>
+						</a>
+					</td>
+					<td id="blokit" class="hackathonProject">
+						<a href="https://devpost.com/software/blok-it" target="_blank">
+							<img src="resources/blokit.jpg">
+							<img id="winnerOverlay" src="resources/winner-ribbon.png">
+							<div class="projectTitle">BLOK.IT</div>
+							<div id="blokitAward" class="awardContainer">
+								<strong>#HackHarrassment Award at QHacks 2017</strong>
+							</div>
+						</a>
+					</td>
+					<td class="hackathonProject">
+						<a href="https://devpost.com/software/intelihelm" target="_blank">
+							<img src="resources/intellihelm.jpg">
+							<div class="projectTitle">INTELLIHELM</div>
+						</a>
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -101,10 +133,26 @@
 			<h4>Others</h4>
 			<table id="projectsTbl">
 				<tr>
-					<td class="project"><img src="resources/coinRobot.jpg"></td>
-					<td class="project"><img src="resources/distance_measurer.jpg"></td>
-					<td class="project"><img src="resources/trussBridge.png"></td>
-					<td class="project"><img src="resources/attendanceAid.jpg"></td>
+					<td id="coinCashier" class="project">
+						<img src="resources/coinRobot.jpg">
+						<div class="projectTitle">AUTOMATED COIN CASHIER</div>
+					</td>
+					<td id="statsProject" class="project">
+						<img src="resources/distance_measurer.jpg">
+						<div class="projectTitle">DISTANCE MEASURER</div>
+					</td>
+					<td id="trussBridge" class="project">
+						<img src="resources/trussBridge.png">
+						<img id="winnerOverlay" src="resources/winner-ribbon.png">
+						<div class="projectTitle long">OPTIMUM TRUSS DESIGN</div>
+						<div id="trussAward" class="awardContainer">
+							<strong>3rd Place in Class of 100</strong>
+						</div>
+					</td>
+					<td id="attendanceAid" class="project">
+						<img src="resources/attendanceAid.jpg">
+						<div class="projectTitle">ATTENDANCE SCHEDULER</div>
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -121,10 +169,19 @@
 						<td class="modalCompany">Sample Company</td>
 					</tr>
 				</table>
-				<h5>Stay tuned for more details!</h5>
+				<div class="gallery"></div>
+				<div class="contentHTML"></div>
 			</div>
 		</div>
 
+		<div id="projectModal" class="modal">
+			<div class="modal-content">
+				<span class="projectClose">&times;</span>
+				<p class="projectModalTitle"></p>
+				<div class="projectGallery"></div>
+				<div class="projectContentHTML"></div>
+			</div>
+		</div>
 		<p></p>
 	</section>
 </body>
