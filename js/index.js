@@ -143,6 +143,14 @@ $(document).ready(() => {
                 galleryImg: 'resources/llc-group.jpg',
                 content: '<h3 style="text-align: center">Details coming soon. Stay tuned!</h3>'
             },
+            watoRow: {
+                id: 'wato-logo',
+                src: 'resources/wato.png',
+                title: "Power Systems Sub-Team Lead",
+                company: "WATonomous Student Design Team",
+                galleryImg: 'resources/wato.png',
+                content: '<h3 style="text-align: center">Details coming soon. Stay tuned!</h3>'
+            },
             uwaftRow: {
                 id: 'uwaft-logo',
                 src: 'resources/uwaft_logo.png',
