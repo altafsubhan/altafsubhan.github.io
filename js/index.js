@@ -34,6 +34,14 @@ $(document).ready(() => {
 
     function fillContent(targetRow) {
         data = {
+            teslaRow:{
+                id: 'tesla-logo',
+                src: 'resources/tesla-logo.png',
+                title: 'Firmware Program Manager',
+                company: 'Tesla, Inc.',
+                galleryImg: 'resources/tesla-logo.png',
+                content: '<h3 style="text-align: center">Details coming soon. Stay tuned!</h3>'
+            },
             sapRow: {
                 id: 'sap-logo',
                 src: 'resources/SAP-Logo.png',
