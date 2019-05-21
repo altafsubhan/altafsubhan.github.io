@@ -271,6 +271,14 @@ $(document).ready(() => {
                     for supply teachers covering for teachers that are away. It can pull information \
                     from an Excel spreadsheet regarding both types of teachers and find best matches. \
                     </p><h3 style="text-align:center">More details coming soon. Stay tuned!</h3>' 
+            },
+            barbyRobot : {
+                title: 'Obstacle Course Robot',
+                vid: 'https://www.youtube.com/embed/ozYZwa-hGDU',
+                content: '<p>Designed and built a robot to follow a lined track, stop at multiple stations \
+                    with varying magnetic fields, and perform different tricks using the LED. The robot \
+                    included an MCU, a hall-effect sensor, a thermistor, and two optical encoders that \
+                    my partner and I designed and soldered circuits for.'
             }
         }
         $('.projectModalTitle').text(data[project].title);
