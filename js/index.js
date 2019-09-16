@@ -39,8 +39,18 @@ $(document).ready(() => {
                 src: 'resources/tesla-logo.png',
                 title: 'Firmware Program Manager',
                 company: 'Tesla, Inc.',
-                galleryImg: 'resources/tesla-logo.png',
-                content: '<h3 style="text-align: center">Details coming soon. Stay tuned!</h3>'
+                galleryImg: 'resources/tesla-interns.JPG',
+                content: '<p> \
+                As a Program Manager, I led two major projects related to Vehicle Firmware and firmware provisioning \
+                during manufacturing. My main goal in each project was to enable all relevant teams to achieve their \
+                best performance and yield optimum results. My main tasks included defining project scope and \
+                forming a road map to achieve set goals, aligning all stakeholders on the objectives, analyzing \
+                and mitigating risks involved with development, facilitating cross-functional communication, and \
+                being at the forefront to remove any roadblocks and solve any problems that arise.</p><p> \
+                I also took on a side project involving development and data analysis for functional interfaces \
+                related to CAN communication. I gained extensive experience with Tesla\'s firmware architecture, \
+                manufacturing process - especially that related to firmware installation, board bring-up, and \
+                various levels of development, integration, and validation.'
             },
             sapRow: {
                 id: 'sap-logo',
