@@ -34,11 +34,19 @@ $(document).ready(() => {
 
     function fillContent(targetRow) {
         data = {
+            nvidiaRow:{
+                id: 'nvidia-logo',
+                src: 'resources/nvidia-logo.png',
+                title: 'Silicon Validation Engineer',
+                company: 'NVIDIA, Santa Clara',
+                galleryImg: 'resources/nvidia-logo.png',
+                content: '<h3 style="text-align: center">Details coming soon. Stay tuned!</h3>'
+            },
             teslaRow:{
                 id: 'tesla-logo',
                 src: 'resources/tesla-logo.png',
                 title: 'Firmware Program Manager',
-                company: 'Tesla, Inc.',
+                company: 'Tesla, Palo Alto',
                 galleryImg: 'resources/tesla-interns.JPG',
                 content: '<p> \
                 As a Program Manager, I led two major projects related to Vehicle Firmware and firmware provisioning \
@@ -56,7 +64,7 @@ $(document).ready(() => {
                 id: 'sap-logo',
                 src: 'resources/SAP-Logo.png',
                 title: "Product Management Intern",
-                company: "SAP Labs Waterloo",
+                company: "SAP, Waterloo",
                 galleryImg: 'resources/sap-coops.JPG',
                 content: '<p> \
                 A major part of my job was spent researching and creating content for python \
@@ -106,7 +114,7 @@ $(document).ready(() => {
                 id: 'linamar-logo',
                 src: 'resources/linamar2.png',
                 title: "Manufacturing Engineering Intern",
-                company: "Linamar Corporation",
+                company: "Linamar Corporation, Guelph",
                 galleryImg: 'resources/skyjack-coop.jpg',
                 content: '<p>My work term was evenly split between software and mechanical projects.\
                 </p><p><strong>Software:</strong></p><ul> \
@@ -126,7 +134,7 @@ $(document).ready(() => {
                 id: 'gm-logo',
                 src: 'resources/gm.png',
                 title: "Innovation Specialist",
-                company: "General Motors of Canada",
+                company: "General Motors of Canada, Oshawa",
                 galleryVid: 'resources/gm-vid.mp4',
                 content: '<p>As an Innovation Specialist at GM 2908 Innovation Lab, I \
                 formed the liaison between customers and the big corporation. My job \

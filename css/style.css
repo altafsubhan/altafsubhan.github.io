@@ -212,14 +212,19 @@ a {
 	text-align: center;
 }
 
+#nvidia-logo {
+	width: 30%;
+	padding: 2% 0 2% 0;
+}
+
 #sap-logo {
-	width: 45%;
+	width: 40%;
 	padding: 2% 0 2% 0;
 }
 
 #tesla-logo {
 	width: 25%;
-	padding: 2% 0 2% 0;
+	padding: 0;
 }
 
 #linamar-logo {
