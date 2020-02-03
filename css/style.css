@@ -112,7 +112,7 @@ a {
 
 #resumePic {
 	height: auto;
-	width: 46%;
+	width: 44%;
 	padding-bottom: 3%;
 }
 
@@ -125,6 +125,12 @@ a {
 	padding-bottom: 3.5%;
 	height: auto;
 	width: 45%;
+}
+
+#travelPic { 
+	padding-bottom: 3.5%;
+	height: auto;
+	width: 47%;
 }
 
 .titleImage {
@@ -154,6 +160,7 @@ a {
 
 .iconBtns figure {
 	display: inline-block;
+	margin: 3%;
 	width: 15%;
 }
 
@@ -168,7 +175,7 @@ a {
 	display: table;
 }
 
-#experiencePage h5 {
+#experiencePage h5, #travelPage h5 {
 	color: black;
 	font-size: 40pt;
 	margin-bottom: 3%;
@@ -179,7 +186,7 @@ a {
 	text-align: center;
 }
 
-#experiencePage h4 {
+#experiencePage h4, #travelPage h4 {
 	font-family: "Montserrat";
 	font-weight: 200;
 	font-size: 20pt;
@@ -399,7 +406,7 @@ a {
 	text-decoration: underline;
 }
 
-.awardContainer {
+.awardContainer{
 	position: absolute;
 	top: 10%;
 	right: 7%;
@@ -411,6 +418,73 @@ a {
 
 	background-color: #FFC207;
 	color: white;
+	padding: 2%;
+
+	display: none;
+	z-index: 10;
+}
+
+#travelsTitle {
+	margin-bottom: 8%;
+}
+
+#travels {
+	margin: 2.5% 10% 2.5% 10%;
+	width: 80%;
+	height: auto;
+
+	display: block;
+	overflow: visible;
+}
+
+#lundContainer {
+	display: inline-block;
+	width: 29%;
+}
+
+#temp {
+	display: inline-block;
+	width: 70%;
+}
+
+#madridContainer {
+	display: inline-block;
+	position: relative;
+	width: 56%;
+}
+
+#londonContainer {
+	display: inline-block;
+	position: relative;
+	width: 42%;
+}
+
+#amalfiContainer {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+}
+
+.travelImg {
+	width: 100%;
+}
+
+.travelImg:hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.lblContainer {
+	position: absolute;
+	top: 0;
+	overflow: auto;
+
+	font-family: "Avenir";
+	font-size: 100%;
+	text-align: center;
+
+	background-color: white;
+	color: black;
 	padding: 2%;
 
 	display: none;

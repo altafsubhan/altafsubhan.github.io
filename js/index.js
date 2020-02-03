@@ -232,6 +232,14 @@ $(document).ready(() => {
         $("#trussAward").css("display", "none");
     });
 
+    $('.travelContainer').hover(function() {
+        let lbl = $(this).find(".lblContainer")
+        lbl.css("display", "block");
+    }, function() {
+        let lbl = $(this).find(".lblContainer")
+        lbl.css("display", "none");
+    });
+
     var projects = $('.project');
     var projectModal = $('#projectModal');
     var projectSpan = $(".projectClose")[0];
