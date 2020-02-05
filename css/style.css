@@ -433,36 +433,123 @@ a {
 	width: 80%;
 	height: auto;
 
-	display: block;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 	overflow: visible;
 }
 
 #lundContainer {
-	display: inline-block;
-	width: 29%;
+	position: relative;
+	width: 30%;
 }
 
-#temp {
-	display: inline-block;
+#cluster1 {
+	display: flex;
+	flex-direction: column;
 	width: 70%;
 }
 
+#cluster2 {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
 #madridContainer {
-	display: inline-block;
 	position: relative;
-	width: 56%;
+	width: 57.1%;
 }
 
 #londonContainer {
-	display: inline-block;
 	position: relative;
-	width: 42%;
+	width: 42.8%;
 }
 
 #amalfiContainer {
-	display: inline-block;
 	position: relative;
 	width: 100%;
+}
+
+#zaragozaContainer {
+	position: relative;
+	width: 30%;
+	transform: translate(0, -36%);
+}
+
+#genevaContainer {
+	position: relative;
+	width: 20%;
+}
+
+#malmoContainer {
+	position: relative;
+	width: 20%;
+}
+
+#viennaContainer {
+	position: relative;
+	width: 30%;
+}
+
+#stockholmContainer {
+	position: relative;
+	width: 70%;
+	transform: translate(0, -39.6%);
+	/*transform: translate(0, -27.6%);*/
+}
+
+#lausanneContainer {
+	position: relative;
+	width: 30%;
+}
+
+#ghentContainer, #toledoContainer, #cphContainer {
+	position: relative;
+	width: 33.33%;
+	transform: translate(0, -36.7%);
+}
+
+#milanContainer, #luganoContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0, -21.5%);
+}
+
+#lisbonContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(100%,-144.4%);
+}
+
+#barcelonaContainer {
+	position: relative;
+	width: 100%;
+	transform: translate(0,-129.8%);
+}
+
+#osloContainer, #pragueContainer {
+	position: relative;
+	width: 25%;
+	transform: translate(0, -70.7%);
+}
+
+#interlakenContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0%, -70.7%);
+}
+
+#romeContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0, -423.4%);
+}
+
+#budapestContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(-100%, -323.4%);
 }
 
 .travelImg {
