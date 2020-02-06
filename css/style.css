@@ -552,6 +552,30 @@ a {
 	transform: translate(-100%, -323.4%);
 }
 
+#skarduContainer {
+	position: relative;
+	width: 100%;
+	transform: translate(0%, -52.5%);/*-247.5%);*/
+}
+
+#naranContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0%, -272.1%);
+}
+
+#sfContainer {
+	position: relative;
+	width: 25%;
+	transform: translate(0%, -272.1%);
+}
+
+#laContainer {
+	position: relative;
+	width: 25%;
+	transform: translate(0%, -272.1%);
+}
+
 .travelImg {
 	width: 100%;
 }
