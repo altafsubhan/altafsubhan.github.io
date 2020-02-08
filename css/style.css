@@ -325,7 +325,7 @@ a {
     margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 70%; 
 }
 
 .close, .projectClose {
@@ -574,6 +574,12 @@ a {
 	position: relative;
 	width: 25%;
 	transform: translate(0%, -272.1%);
+}
+
+#yosemiteContainer, #deathvalleyContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0%, -136%);
 }
 
 .travelImg {
