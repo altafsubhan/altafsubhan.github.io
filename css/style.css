@@ -579,7 +579,19 @@ a {
 #yosemiteContainer, #deathvalleyContainer {
 	position: relative;
 	width: 50%;
-	transform: translate(0%, -136%);
+	transform: translate(0%, -136.1%);
+}
+
+#grandcanyonContainer, #chicagoContainer {
+	position: relative;
+	width: 25%;
+	transform: translate(0%, -272.3%);
+}
+
+#xusContainer {
+	position: relative;
+	width: 50%;
+	transform: translate(0%, -272.2%);
 }
 
 .travelImg {
