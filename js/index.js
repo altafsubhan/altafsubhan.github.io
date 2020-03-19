@@ -1,5 +1,8 @@
 $(document).ready(() => {
     var w = window.innerWidth;
+
+    if (w < 600) alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
+
     setTimeout(() => {
         $('#scroll-down-pointer').css("visibility", "visible");
         $('#scroll-down-pointer').css("transform", "translateX(" + 0.36*(w) + "px)");
@@ -234,10 +237,22 @@ $(document).ready(() => {
 
     $('.travelContainer').hover(function() {
         let lbl = $(this).find(".lblContainer")
+        let border = $(this).find(".flagOverlay");
+        let img = $(this).find(".travelImg");
         lbl.css("display", "block");
+        border.css("opacity", "1");
+        img.css("opacity", "0.6");
+        border.css("cursor", "pointer");
+        img.css("cursor", "pointer");
     }, function() {
-        let lbl = $(this).find(".lblContainer")
+        let lbl = $(this).find(".lblContainer");
+        let border = $(this).find(".flagOverlay");
+        let img = $(this).find(".travelImg");
         lbl.css("display", "none");
+        border.css("opacity", "0");
+        img.css("opacity", "1");
+        border.css("cursor", "auto");
+        img.css("cursor", "auto");
     });
 
     var projects = $('.project');
@@ -317,4 +332,14 @@ $(document).ready(() => {
         $('.projectContentHTML').html(data[project].content);
         $('.projectContentHTML').css("display", "block");
     }
+});
+
+$(window).on("load", () => {
+    $('.lblContainer').each(function(i) {
+        let x = $(this).width()/2;
+        let y = $(this).height()/2;
+        $(this).css("transform", "translate(-" + x + "px, -" + y + "px)");
+    });
+    let hgt = $('#travels').height();
+    $('#travels').height(0.9*hgt);
 });
