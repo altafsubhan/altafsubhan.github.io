@@ -64,6 +64,16 @@ body {
 	src: url(../Fonts/raleway/Raleway-Regular.ttf);
 }
 
+@font-face {
+	font-family: "Avenir";
+	src: url(../Fonts/avenir/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+	font-family: "AvenirBold";
+	src: url(../Fonts/avenir/AvenirLTStd-Black.otf);
+}
+
 #homePage h5 {
 	color: white;
 	font-size: 55pt;
@@ -642,11 +652,11 @@ a {
 
 .lblContainer {
 	position: absolute;
-	top: 60%;
+	top: 60.5%;
 	left: 0;
 	overflow: auto;
 
-	font-family: "Avenir";
+	font-family: "AvenirBold";
 	text-align: center;
 	font-size: 28px;
 	font-weight: bolder;
@@ -677,5 +687,5 @@ a {
 }
 
 #osloLbl, #pragueLbl{
-	top: 22%;
+	top: 22.5%;
 }
