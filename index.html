@@ -226,14 +226,14 @@
 					<div class = "travelContainer" id="madridContainer">
 						<img class="travelImg" src="resources/madrid.jpg">
 						<img class="flagOverlay" src="resources/spn-flag.jpg">
-						<div class="lblContainer">
+						<div class="lblContainer" id="madridLbl">
 							<strong>Madrid, Spain</strong>
 						</div>
 					</div>
 					<div class = "travelContainer" id="londonContainer">
 						<img class="travelImg" src="resources/london.jpg">
 						<img class="flagOverlay" src="resources/eng-flag.jpg">
-						<div class="lblContainer">
+						<div class="lblContainer" id="londonLbl">
 							<strong>London, England</strong>
 						</div>
 					</div>
@@ -241,7 +241,7 @@
 				<div class = "travelContainer" id="amalfiContainer">
 					<img class="travelImg" src="resources/amalfi.jpg">
 					<img class="flagOverlay" src="resources/itl-flag.jpg">
-					<div class="lblContainer">
+					<div class="lblContainer" id="amalfiLbl">
 						<strong>Amalfi, Italy</strong>
 					</div>
 				</div>
@@ -249,28 +249,28 @@
 			<div class="travelContainer" id="zaragozaContainer">
 				<img class="travelImg" src="resources/zaragoza.jpg">
 				<img class="flagOverlay" src="resources/spn-flag.jpg">
-				<div class="lblContainer">
+				<div class="lblContainer" id="zaragozaLbl">
 					<strong>Zaragoza, Spain</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="genevaContainer">
 				<img class="travelImg" src="resources/geneva.jpg">
-				<img class="flagOverlay" src="resources/swz-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="genevaOverlay" src="resources/swz-flag.jpg">
+				<div class="lblContainer" id="genevaLbl">
 					<strong>Geneva, Switzerland</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="malmoContainer">
 				<img class="travelImg" src="resources/malmo.jpg">
-				<img class="flagOverlay" src="resources/sw-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="malmoOverlay" src="resources/sw-flag.jpg">
+				<div class="lblContainer" id="malmoLbl">
 					<strong>Malmö, Sweden</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="viennaContainer">
 				<img class="travelImg" src="resources/vienna.jpg">
 				<img class="flagOverlay" src="resources/ast-flag.jpg">
-				<div class="lblContainer">
+				<div class="lblContainer" id="viennaLbl">
 					<strong>Vienna, Austria</strong>
 				</div>
 			</div>
@@ -283,8 +283,8 @@
 			</div>
 			<div class="travelContainer" id="lausanneContainer">
 				<img class="travelImg" src="resources/lausanne.jpg">
-				<img class="flagOverlay" src="resources/swz-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="lausanneOverlay" src="resources/swz-flag.jpg">
+				<div class="lblContainer" id="lausanneLbl">
 					<strong>Lausanne, Switzerland</strong>
 				</div>
 			</div>
@@ -304,7 +304,7 @@
 			</div>
 			<div class="travelContainer" id="ghentContainer">
 				<img class="travelImg" src="resources/ghent.jpg">
-				<img class="flagOverlay" src="resources/bel-flag.jpg">
+				<img class="flagOverlay" id="ghentOverlay" src="resources/bel-flag.jpg">
 				<div class="lblContainer">
 					<strong>Ghent, Belgium</strong>
 				</div>
@@ -318,15 +318,15 @@
 			</div>
 			<div class="travelContainer" id="milanContainer">
 				<img class="travelImg" src="resources/milan.jpg">
-				<img class="flagOverlay" src="resources/itl-flag.jpg">
+				<img class="flagOverlay" id="milanOverlay" src="resources/itl-flag.jpg">
 				<div class="lblContainer">
 					<strong>Milan, Italy</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="luganoContainer">
 				<img class="travelImg" src="resources/lugano.jpg">
-				<img class="flagOverlay" src="resources/swz-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="luganoOverlay" src="resources/swz-flag.jpg">
+				<div class="lblContainer" id="luganoLbl">
 					<strong>Lugano, Switzerland</strong>
 				</div>
 			</div>
@@ -339,22 +339,22 @@
 			</div>
 			<div class="travelContainer" id="barcelonaContainer">
 				<img class="travelImg" src="resources/barcelona.jpg">
-				<img class="flagOverlay" src="resources/spn-flag.jpg">
+				<img class="flagOverlay" id="barcaOverlay" src="resources/spn-flag.jpg">
 				<div class="lblContainer">
 					<strong>Barcelona, Spain</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="osloContainer">
 				<img class="travelImg" src="resources/oslo.jpg">
-				<img class="flagOverlay" src="resources/nor-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="osloOverlay" src="resources/nor-flag.jpg">
+				<div class="lblContainer" id="osloLbl">
 					<strong>Oslo, Norway</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="pragueContainer">
 				<img class="travelImg" src="resources/prague.jpg">
-				<img class="flagOverlay" src="resources/czc-flag.jpg">
-				<div class="lblContainer">
+				<img class="flagOverlay" id="pragueOverlay" src="resources/czc-flag.jpg">
+				<div class="lblContainer" id="pragueLbl">
 					<strong>Prague, Czechia</strong>
 				</div>
 			</div>
@@ -373,50 +373,50 @@
 				</div>
 			</div>
 			<div class="travelContainer" id="budapestContainer">
-				<img class="travelImg" src="resources/budapest.jpg">
-				<img class="flagOverlay" src="resources/hgy-flag.jpg">
+				<img class="travelImg" src="resources/budapest2.jpg">
+				<img class="flagOverlay" id="budapestOverlay" src="resources/hgy-flag.jpg">
 				<div class="lblContainer">
 					<strong>Budapest, Hungary</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="naranContainer">
 				<img class="travelImg" src="resources/naran.png">
-				<img class="flagOverlay" src="resources/pak-flag.jpg">
+				<img class="flagOverlay" src="resources/pak-flag2.jpg">
 				<div class="lblContainer">
 					<strong>Naran, Pakistan</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="sfContainer">
 				<img class="travelImg" src="resources/sanfrancisco.jpg">
-				<img class="flagOverlay" src="resources/usa-flag.jpg">
+				<img class="flagOverlay"  id="usaOverlay" src="resources/usa-flag2.jpg">
 				<div class="lblContainer">
 					<strong>Bay Area, CA</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="laContainer">
 				<img class="travelImg" src="resources/la.jpg">
-				<img class="flagOverlay" src="resources/usa-flag.jpg">
+				<img class="flagOverlay"  id="usaOverlay" src="resources/usa-flag2.jpg">
 				<div class="lblContainer">
 					<strong>Los Angeles, CA</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="yosemiteContainer">
 				<img class="travelImg" src="resources/yosemite.jpg">
-				<img class="flagOverlay" src="resources/usa-flag.jpg">
+				<img class="flagOverlay" id="usaOverlay" src="resources/usa-flag2.jpg">
 				<div class="lblContainer">
 					<strong>Yosemite , California</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="deathvalleyContainer">
 				<img class="travelImg" src="resources/deathvalley.jpg">
-				<img class="flagOverlay" src="resources/usa-flag.jpg">
+				<img class="flagOverlay" id="usaOverlay" src="resources/usa-flag2.jpg">
 				<div class="lblContainer">
 					<strong>Death Valley, California</strong>
 				</div>
 			</div>
 			<div class="travelContainer" id="xusContainer">
 				<img class="travelImg" src="resources/x-us.jpg">
-				<img class="flagOverlay" src="resources/usa-flag.jpg">
+				<img class="flagOverlay"  id="usaOverlay" src="resources/usa-flag.jpg">
 				<div class="lblContainer">
 					<strong>Cross-USA Road Trip</strong>
 				</div>

@@ -336,9 +336,9 @@ $(document).ready(() => {
 
 $(window).on("load", () => {
     $('.lblContainer').each(function(i) {
-        let x = $(this).width()/2;
-        let y = $(this).height()/2;
-        $(this).css("transform", "translate(-" + x + "px, -" + y + "px)");
+        let x = ($(this).parent().width() - $(this).width())/2;
+        //let y = $(this).parent.height()/2;
+        $(this).css("transform", "translateX(" + x + "px");
     });
     let hgt = $('#travels').height();
     $('#travels').height(0.9*hgt);
