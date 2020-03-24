@@ -17,11 +17,11 @@
 <body>
 	<nav id="navbar">
 		<a href="index.html"><h1 id="navbar-header">S/A</h1></a>
-		<a href="javascript:alert('Coming soon!');"><h2 id="navbar-buttons">About Me</h2></a>
-		<a href="#travelsTitle"><h2 id="navbar-buttons">Travels</h2></a>
-		<a href="resources/Resume_3B_HW_Web.pdf"><h2 id="navbar-buttons">Resume</h2></a>
-		<a href="#projectsTitle"><h2 id="navbar-buttons">Projects</h2></a>
-		<a href="#experienceTitle"><h2 id="navbar-buttons">Experience</h2></a>
+		<!--a href="javascript:alert('Coming soon!');"><h2 id="navbar-buttons">About Me</h2></a-->
+		<h2 id="navbar-buttons" class="travelIcon">Travels</h2>
+		<a href="resources/Resume_3B_HW_Web.pdf" target="_blank"><h2 id="navbar-buttons">Resume</h2></a>
+		<h2 id="navbar-buttons" class="projectIcon">Projects</h2>
+		<h2 id="navbar-buttons" class="experienceIcon">Experience</h2>
 	</nav>
 
 	<section id="homePage">
@@ -30,22 +30,22 @@
 			<h3>Mechatronics Engineering Student at University of Waterloo</h3>
 			<hr/>
 			<div class="iconBtns">
-				<figure>
-					<a href="#experienceTitle"><img src="resources/experienceIcon.png" alt="Experience Icon" id="experiencePic"></a>
-					<a href="#experienceTitle"><figcaption>EXPERIENCE</figcaption></a>
+				<figure class="experienceIcon">
+					<img src="resources/experienceIcon.png" alt="Experience Icon" id="experiencePic">
+					<figcaption>EXPERIENCE</figcaption>
 				</figure>
 				<figure>
-					<a href="resources/Resume_3B_HW_Web.pdf"><img src="resources/resumeIcon.png" alt="Resume Icon" id="resumePic"></a>
-					<a href="resources/Resume_3B_HW_Web.pdf"><figcaption>RESUME</figcaption></a>
+					<a href="resources/Resume_3B_HW_Web.pdf" target="_blank"><img src="resources/resumeIcon.png" alt="Resume Icon" id="resumePic"></a>
+					<a href="resources/Resume_3B_HW_Web.pdf" target="_blank"><figcaption>RESUME</figcaption></a>
 				</figure>
-				<figure>
-					<a href="#travelsTitle"><img src="resources/travelIcon.png" alt="Travel Icon" id="travelPic"></a>
-					<a href="travelsTitle  vvcm "><figcaption>TRAVELS</figcaption></a>
+				<figure class="travelIcon">
+					<img src="resources/travelIcon.png" alt="Travel Icon" id="travelPic"></a>
+					<figcaption>TRAVELS</figcaption>
 				</figure>
-				<figure>
+				<!--figure>
 					<a href="javascript:alert('Coming soon!');"><img src="resources/aboutMeIcon.png" alt="About Me Icon" id="aboutMePic"></a>
 					<a href="javascript:alert('Coming soon!');"><figcaption>ABOUT ME</figcaption></a>
-				</figure>
+				</figure-->
 			</div>
 		</div>
 		<img id="scroll-down-pointer" src="resources/arrow-down.gif">
@@ -210,10 +210,10 @@
 	</section>
 
 	<section id="travelPage">
-		<div id ="travelsTitle">
+		<div id ="travelTitle">
 			<h5>Follow My Travels</h5>
 		</div>
-		<div id="travels">
+		<div id="travel">
 			<div class = "travelContainer" id="lundContainer">
 				<img class="travelImg" src="resources/lund.jpg">
 				<img class="flagOverlay" id="lundOverlay" src="resources/sw-flag.jpg">

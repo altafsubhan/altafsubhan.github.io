@@ -52,6 +52,7 @@ body {
 #navbar-buttons:hover {
 	color: green;
 	opacity: 0.75;
+	cursor: pointer;
 }
 
 @font-face {
@@ -176,6 +177,7 @@ a {
 
 .iconBtns figure:hover {
 	opacity: 0.7;
+	cursor: pointer;
 }
 
 #internships, #otherExperience, #hackathons, #projects {
@@ -434,11 +436,11 @@ a {
 	z-index: 10;
 }
 
-#travelsTitle {
+#travelTitle {
 	margin-bottom: 8%;
 }
 
-#travels {
+#travel {
 	margin: 2.5% 10% 2.5% 10%;
 	width: 80%;
 	height: auto;

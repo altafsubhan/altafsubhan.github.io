@@ -3,6 +3,24 @@ $(document).ready(() => {
 
     if (w < 600) alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
 
+    $('.experienceIcon').click(function(){
+        $('html, body').animate({
+            scrollTop: parseInt($("#experiencePage").offset().top - 100)
+        }, 1000);
+    });
+
+    $('.travelIcon').click(function(){
+        $('html, body').animate({
+            scrollTop: parseInt($("#travelPage").offset().top - 100)
+        }, 2100);
+    });
+
+    $('.projectIcon').click(function(){
+        $('html, body').animate({
+            scrollTop: parseInt($("#projectsTitle").offset().top - 100)
+        }, 1500);
+    });
+
     setTimeout(() => {
         $('#scroll-down-pointer').css("visibility", "visible");
         $('#scroll-down-pointer').css("transform", "translateX(" + 0.36*(w) + "px)");
@@ -340,6 +358,6 @@ $(window).on("load", () => {
         //let y = $(this).parent.height()/2;
         $(this).css("transform", "translateX(" + x + "px");
     });
-    let hgt = $('#travels').height();
-    $('#travels').height(0.9*hgt);
+    let hgt = $('#travel').height();
+    $('#travel').height(0.9*hgt);
 });
