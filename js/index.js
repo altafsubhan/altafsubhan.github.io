@@ -1,7 +1,9 @@
 $(document).ready(() => {
     var w = window.innerWidth;
 
-    if (w < 600) alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
+    }
 
     $('.experienceIcon').click(function(){
         $('html, body').animate({
@@ -229,6 +231,7 @@ $(document).ready(() => {
         $('.contentHTML').css("display", "block");
     }
 
+    // award popups
     $('#tango').hover(function() {
         $("#tangoAward").css("display", "block");
     }, function() {
