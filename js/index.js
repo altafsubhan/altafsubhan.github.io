@@ -1,10 +1,12 @@
 $(document).ready(() => {
     var w = window.innerWidth;
 
+    // detect mobile device
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
     }
 
+    // scroll for icon buttons
     $('.experienceIcon').click(function(){
         $('html, body').animate({
             scrollTop: parseInt($("#experiencePage").offset().top - 100)
@@ -23,34 +25,34 @@ $(document).ready(() => {
         }, 1500);
     });
 
+    // arrow to indicate scroll
     setTimeout(() => {
         $('#scroll-down-pointer').css("visibility", "visible");
         $('#scroll-down-pointer').css("transform", "translateX(" + 0.36*(w) + "px)");
     }, 1500);
 
+    // show navbar on scroll
     $(window).scroll(() => {
         $("#navbar").css("display", "block");
         $('#scroll-down-pointer').css("visibility", "hidden");
     });
 
-    var rows = $('.experienceRow');
-    var modal = $('#mainModal');
-    var span = $(".close")[0];
+    // experience modal
+    $('.experienceRow').click(function(e){
+        $("#navbar").css("display", "none");
+        fillContent(e.target.parentElement.id);
+        $('#experienceModal').css("display", "block");
+    });
 
-    for (var i = 0; i < rows.length; i++) {
-        rows[i].addEventListener("click", (e) => {
-            $("#navbar").css("display", "none");
-            fillContent(e.target.parentElement.id);
-            modal.css("display", "block");
-        })
-    }
-    span.addEventListener("click", () => {
-        modal.css("display", "none");
+    // common for all modals
+    $(".close").click(function(e){
+        $(".modal").css("display", "none");
         $("#navbar").css("display", "block");
     });
+
     window.addEventListener("click", (e) => {
-        if (e.target.id == "mainModal") {
-            modal.css("display", "none");
+        if (e.target.className == "modal") {
+            $('.modal').css("display", "none");
             $("#navbar").css("display", "block");
         }
     });
@@ -256,46 +258,10 @@ $(document).ready(() => {
         $("#trussAward").css("display", "none");
     });
 
-    $('.travelContainer').hover(function() {
-        let lbl = $(this).find(".lblContainer")
-        let border = $(this).find(".flagOverlay");
-        let img = $(this).find(".travelImg");
-        lbl.css("display", "block");
-        border.css("opacity", "1");
-        img.css("opacity", "0.6");
-        border.css("cursor", "pointer");
-        img.css("cursor", "pointer");
-    }, function() {
-        let lbl = $(this).find(".lblContainer");
-        let border = $(this).find(".flagOverlay");
-        let img = $(this).find(".travelImg");
-        lbl.css("display", "none");
-        border.css("opacity", "0");
-        img.css("opacity", "1");
-        border.css("cursor", "auto");
-        img.css("cursor", "auto");
-    });
-
-    var projects = $('.project');
-    var projectModal = $('#projectModal');
-    var projectSpan = $(".projectClose")[0];
-
-    for (var i = 0; i < projects.length; i++) {
-        projects[i].addEventListener("click", (e) => {
-            $("#navbar").css("display", "none");
-            showProject(e.target.parentElement.id);
-            projectModal.css("display", "block");
-        })
-    }
-    projectSpan.addEventListener("click", () => {
-        projectModal.css("display", "none");
-        $("#navbar").css("display", "block");
-    });
-    window.addEventListener("click", (e) => {
-        if (e.target.id == "projectModal") {
-            projectModal.css("display", "none");
-            $("#navbar").css("display", "block");
-        }
+    $('.project').click(function(e){
+        $("#navbar").css("display", "none");
+        showProject(e.target.parentElement.id);
+        $("#projectModal").css("display", "block");
     });
 
     function showProject(project){
@@ -353,6 +319,186 @@ $(document).ready(() => {
         $('.projectContentHTML').html(data[project].content);
         $('.projectContentHTML').css("display", "block");
     }
+
+    $('.travelContainer').hover(function() {
+        //let lbl = $(this).find(".lblContainer");
+        $(this).find(".lblContainer").css("display", "block");
+        
+        let border = $(this).find(".flagOverlay");
+        border.css("opacity", "1");
+        border.css("cursor", "pointer");
+        
+        let img = $(this).find(".travelImg");
+        img.css("opacity", "0.6");
+        img.css("cursor", "pointer");
+    }, function() {
+        //let lbl = $(this).find(".lblContainer");
+        $(this).find(".lblContainer").css("display", "none");
+        
+        let border = $(this).find(".flagOverlay");
+        border.css("opacity", "0");
+        border.css("cursor", "auto");
+
+        let img = $(this).find(".travelImg");
+        img.css("opacity", "1");
+        img.css("cursor", "auto");
+    });
+
+    // experience modal
+    $('.travelContainer').click(function(e){
+        $("#navbar").css("display", "none");
+        showTravel(e.target.parentElement.id);
+        $('#travelModal').css("display", "block");
+    });
+
+    function showTravel(dest){
+        data = {
+            lund : {
+                title : "Lund, Sverige"
+            },
+            madrid : {
+                title : "Madrid, España"
+            },
+            london : {
+                title : "London, England"
+            },
+            amalfi : {
+                title : "Amalfi, Italia"
+            },
+            zaragoza : {
+                title : "Zaragoza, España"
+            },
+            geneva : {
+                title : "Genève, Suisse"
+            },
+            malmo : {
+                title: "Malmö, Sverige"
+            },
+            vienna : {
+                title : "Wien, Österreich",
+                type : "Art, History, Sightseeing"
+            },
+            stockholm : {
+                title : "Stockholm, Sverige"
+            },
+            lausanne : {
+                title : "Lausanne, Suisse"
+            },
+            cph : {
+                title : "København, Danmark"
+            }, 
+            toledo : {
+                title : "Toledo, España"
+            },
+            ghent : {
+                title : "Gent, België"
+            },
+            skardu : {
+                title : "Skardu, Pakistan"
+            },
+            milan : {
+                title : "Milano, Italia"
+            },
+            lugano : {
+                title : "Lugano, Svizzera"
+            },
+            lisbon : {
+                title : "Lisboa, Portugal"
+            },
+            barcelona : {
+                title : "Barcelona, España"
+            },
+            oslo : {
+                title: "Oslo, Norge"
+            },
+            prague : {
+                title : "Praha, Česká Republika"
+            },
+            interlaken : {
+                title : "Interlaken, Schweiz"
+            },
+            rome : {
+                title : "Roma, Italia"
+            }, 
+            budapest : {
+                title : "Budapest, Magyarország"
+            },
+            naran : {
+                title : "Naran, Pakistan"
+            },
+            sf : {
+                title : "San Francisco Bay Area, USA"
+            },
+            la : {
+                title : "Los Angeles, USA"
+            },
+            yosemite : {
+                title : "Yosemite National Park, USA"
+            },
+            deathvalley : {
+                title : "Death Valley National Park, USA"
+            }, 
+            xus : {
+                title : "Cross-USA Road Trip"
+            }
+        }
+        $('#travelModalTitle').text(data[dest].title);
+        $('#destType').text("Type: " + data[dest].type);
+    }
+
+    let deg = {"while-there": 0, "getting-there": 0};
+    let visibility = {visible : "hidden", hidden: "visible"};
+    let color = {hidden: "#F8F8F8", visible: "#E0E0E0"};
+    $(".travel-text-desc").click(function(e){
+        let id = $(this).attr("id");
+        deg[id] = (deg[id] + 90) % 180;
+        $(this).find(".collapsed").css("transform", "rotate(" + deg[id] + "deg)");
+        let el = "#" + id + "-exp";
+        $(el).slideToggle(500, function(){
+            let top = $("#" + id + "-tabs").height();
+            $(".tab-exp").css("top", top);
+
+            let tab = $(this).find("#first-tab-exp");
+            let state = tab.css("visibility");
+            tab.css("visibility", visibility[state]);
+
+            tab = $(this).find("#first-tab");
+            tab.css("background-color", color[state]);
+            tab.css("opacity", "1");
+            tab.css("border-bottom-style", "none");
+        });
+    });
+
+    $(".tab").click(function(e){
+        let tabs = ["#first-tab-exp", "#second-tab-exp", "#third-tab-exp"];
+        for (let i of tabs){
+            let el = "#" + $(this).attr("id") + "-exp";
+            if (i == el){
+                $(el).css("visibility", "visible");
+                el = el.slice(0,-4);
+                $(this).css({"background-color": "F8F8F8",
+                             "opacity": "1",
+                             "border-bottom-style": "none"});
+            } else {
+                $(i).css("visibility", "hidden");
+                i = i.slice(0,-4);
+                el = $(this).parent().find(i);
+                el.css({"background-color": "E0E0E0",
+                        "border-bottom-style": "solid"});
+            }
+        }
+    });
+    /*
+    let i = 0;
+    $('#right-gallery-btn').click(function(e){
+        i++;
+        $('.vienna-img').css('transform', 'translateX(-' + i + '00%)');
+    });
+
+    $('#left-gallery-btn').click(function(e){
+        i--;
+        $('.vienna-img').css('transform', 'translateX(-' + i + '00%)');
+    });*/
 });
 
 $(window).on("load", () => {

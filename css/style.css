@@ -204,6 +204,13 @@ a {
 	font-size: 20pt;
 }
 
+#travelPage h3 {
+	font-family: "Raleway";
+	font-size: 13pt;
+	text-align: center;
+	margin-bottom: 0;
+}
+
 #internshipsTbl, #hackathonsTbl, #projectsTbl {
 	width: 100%;
 	border-collapse: collapse;
@@ -337,14 +344,16 @@ a {
     margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 70%; 
+    width: 80%; 
 }
 
 .close, .projectClose {
+	background-color: white;
     color: #aaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;
+	font-weight: bold;
+	z-index: 10;
 }
 
 .close:hover, .projectClose:hover,
@@ -437,7 +446,7 @@ a {
 }
 
 #travelTitle {
-	margin-bottom: 8%;
+	margin-bottom: 5%;
 }
 
 #travel {
@@ -451,7 +460,7 @@ a {
 	overflow: visible;
 }
 
-#lundContainer {
+#lund {
 	position: relative;
 	width: 30%;
 }
@@ -468,139 +477,139 @@ a {
 	width: 100%;
 }
 
-#madridContainer {
+#madrid {
 	position: relative;
 	width: 57.1%;
 }
 
-#londonContainer {
+#london {
 	position: relative;
 	width: 42.8%;
 }
 
-#amalfiContainer {
+#amalfi {
 	position: relative;
 	width: 100%;
 }
 
-#zaragozaContainer {
+#zaragoza {
 	position: relative;
 	width: 30%;
 	transform: translate(0, -36%);
 }
 
-#genevaContainer {
+#geneva {
 	position: relative;
 	width: 20%;
 }
 
-#malmoContainer {
+#malmo {
 	position: relative;
 	width: 20%;
 }
 
-#viennaContainer {
+#vienna {
 	position: relative;
 	width: 30%;
 }
 
-#stockholmContainer {
+#stockholm {
 	position: relative;
 	width: 70%;
 	transform: translate(0, -39.6%);
 	/*transform: translate(0, -27.6%);*/
 }
 
-#lausanneContainer {
+#lausanne {
 	position: relative;
 	width: 30%;
 }
 
-#ghentContainer, #toledoContainer, #cphContainer {
+#ghent, #toledo, #cph {
 	position: relative;
 	width: 33.33%;
 	transform: translate(0, -36.7%);
 }
 
-#milanContainer, #luganoContainer {
+#milan, #lugano {
 	position: relative;
 	width: 50%;
 	transform: translate(0, -21.5%);
 }
 
-#lisbonContainer {
+#lisbon {
 	position: relative;
 	width: 50%;
 	transform: translate(100%,-144.4%);
 }
 
-#barcelonaContainer {
+#barcelona {
 	position: relative;
 	width: 100%;
 	transform: translate(0,-129.8%);
 }
 
-#osloContainer, #pragueContainer {
+#oslo, #prague {
 	position: relative;
 	width: 25%;
 	transform: translate(0, -70.7%);
 }
 
-#interlakenContainer {
+#interlaken {
 	position: relative;
 	width: 50%;
 	transform: translate(0%, -70.7%);
 }
 
-#romeContainer {
+#rome {
 	position: relative;
 	width: 50%;
 	transform: translate(0, -423.4%);
 }
 
-#budapestContainer {
+#budapest {
 	position: relative;
 	width: 50%;
 	transform: translate(-100%, -323.6%);
 }
 
-#skarduContainer {
+#skardu {
 	position: relative;
 	width: 100%;
 	transform: translate(0%, -52.5%);/*-247.5%);*/
 }
 
-#naranContainer {
+#naran {
 	position: relative;
 	width: 50%;
 	transform: translate(0%, -272.1%);
 }
 
-#sfContainer {
+#sf {
 	position: relative;
 	width: 25%;
 	transform: translate(0%, -272.1%);
 }
 
-#laContainer {
+#la {
 	position: relative;
 	width: 25%;
 	transform: translate(0%, -272.1%);
 }
 
-#yosemiteContainer, #deathvalleyContainer {
+#yosemite, #deathvalley {
 	position: relative;
 	width: 50%;
 	transform: translate(0%, -136.1%);
 }
 
-#grandcanyonContainer, #chicagoContainer {
+#grandcanyon, #chicago {
 	position: relative;
 	width: 25%;
 	transform: translate(0%, -272.3%);
 }
 
-#xusContainer {
+#xus {
 	position: relative;
 	width: 100%;
 	transform: translate(0%, -186.4%);
@@ -690,4 +699,200 @@ a {
 
 #osloLbl, #pragueLbl{
 	top: 22.5%;
+}
+
+#travelModal h3 {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 30%;
+	color: white;
+
+	font-family: "AvenirBold";
+	font-weight: bolder;
+	-webkit-text-stroke: 1.5px black;
+	
+	font-size: 5vh;
+}
+
+#travelModal h5 {
+	display: none;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 55%;
+	color: white;
+
+	font-family: "AvenirBold";
+	font-weight: bolder;
+	-webkit-text-stroke: 0.5px black;
+
+	font-size: 2.5vh;
+	font-weight: lighter;
+	margin-top: 1.5%;
+	margin-bottom: 4%;
+
+	font-family: "Raleway";
+}
+
+#travelModalCover {
+	position: relative;
+	height: 40%;
+}
+
+#travelCoverPic {
+	position: absolute;
+	width: 103.4%;
+	height: 105%;
+	top: -7.6%;
+	left: -1.7%;
+	object-fit: cover;
+}
+
+#travel-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.travel-text-desc {
+	display: flex;
+	flex-direction: row;
+
+	margin: 0 10% 0 10%;
+	padding-left: 1%;
+
+	height: 7%;
+	opacity: 0.7;
+}
+
+.travel-text-desc:hover {
+	cursor: pointer;
+	opacity: 1;
+
+	background-color: #e8f4f8;
+}
+
+.collapsed {
+	margin-top: 1.75%;
+	height: 50%;
+	margin-right: 0.5%;
+	transition: all 0.5s;
+}
+
+.travel-text-desc p {
+	font-family: "Raleway";
+	margin-top: 2.07%;
+	font-size: 2.5vh;
+}
+
+.travel-text-exp {
+	position: relative;
+	height: 300px;
+	width: 80%;
+	background-color: #E0E0E0;
+	display: none;
+	margin: 0 10% 0 10%;
+}
+
+.tabs-div {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 0;
+}
+
+#side-bar h6 {
+	display: flex;
+	flex-direction: row;
+	opacity: 0.7;
+
+	font-size: 2vh;
+	font-weight: lighter;
+	font-family: "Raleway";
+
+	width: 10%;
+	padding-top: 2%;
+	padding-bottom: 1%;
+	margin-top: 0;
+	margin-bottom: 0%;
+
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #D3D3D3;
+
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #D3D3D3;
+}
+
+#side-bar h6:hover {
+	opacity: 1;
+	border-bottom-color: black;
+	cursor: pointer;
+}
+
+.tab-exp {
+	position: absolute;
+	left: 0%;
+	top: 0;
+	width: 96%;
+	height: 86%;
+
+	padding-left: 2%;
+	padding-right: 2%;
+
+	background-color: #F8F8F8;
+}
+
+#first-tab-exp {
+	visibility: hidden;
+}
+
+#second-tab-exp {
+	visibility: hidden;
+}
+
+#third-tab-exp {
+	visibility: hidden;
+}
+
+#travel-gallery {
+	position: relative;
+	height: 70%;
+	background-color: black;
+
+	margin: 5% 10% 5% 10%;
+
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.vienna-img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#right-gallery-btn {
+	position: absolute;
+	right: 0;
+	top: 45%;
+	height: 10%;
+	z-index: 1000;
+}
+
+#left-gallery-btn {
+	position: absolute;
+	left: 0;
+	top: 45%;
+	height: 10%;
+	z-index: 1000;
+}
+
+#gallery-icon {
+	height: 100%;
+}
+
+#gallery-icon:hover {
+	cursor: pointer;
 }
