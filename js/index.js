@@ -354,50 +354,50 @@ $(document).ready(() => {
     function showTravel(dest){
         data = {
             lund : {
-                title : "Lund, Sverige"
+                title : "Lund, Sweden"
             },
             madrid : {
-                title : "Madrid, España"
+                title : "Madrid, Spain"
             },
             london : {
                 title : "London, England"
             },
             amalfi : {
-                title : "Amalfi, Italia"
+                title : "Amalfi, Italy"
             },
             zaragoza : {
-                title : "Zaragoza, España"
+                title : "Zaragoza, Spain"
             },
             geneva : {
-                title : "Genève, Suisse"
+                title : "Geneva, Switzerland"
             },
             malmo : {
-                title: "Malmö, Sverige"
+                title: "Malmö, Sweden"
             },
             vienna : {
-                title : "Wien, Österreich",
+                title : "Vienna, Austria",
                 type : "Art, History, Sightseeing"
             },
             stockholm : {
-                title : "Stockholm, Sverige"
+                title : "Stockholm, Sweden"
             },
             lausanne : {
-                title : "Lausanne, Suisse"
+                title : "Lausanne, Switzerland"
             },
             cph : {
-                title : "København, Danmark"
+                title : "Copenhagen, Denmark"
             }, 
             toledo : {
-                title : "Toledo, España"
+                title : "Toledo, Spain"
             },
             ghent : {
-                title : "Gent, België"
+                title : "Ghent, Belgium"
             },
             skardu : {
                 title : "Skardu, Pakistan"
             },
             milan : {
-                title : "Milano, Italia"
+                title : "Milan, Italy"
             },
             lugano : {
                 title : "Lugano, Svizzera"
@@ -444,61 +444,23 @@ $(document).ready(() => {
         }
         $('#travelModalTitle').text(data[dest].title);
         $('#destType').text("Type: " + data[dest].type);
+        //$("#getting-around").css("visibility", "visible");
+        //let hgt = $("#getting-around").height();
+        //console.log(hgt);
+        //$("#side-bar").height(hgt);
     }
 
-    let deg = {"while-there": 0, "getting-there": 0};
-    let visibility = {visible : "hidden", hidden: "visible"};
-    let color = {hidden: "#F8F8F8", visible: "#E0E0E0"};
-    $(".travel-text-desc").click(function(e){
-        let id = $(this).attr("id");
-        deg[id] = (deg[id] + 90) % 180;
-        $(this).find(".collapsed").css("transform", "rotate(" + deg[id] + "deg)");
-        let el = "#" + id + "-exp";
-        $(el).slideToggle(500, function(){
-            let top = $("#" + id + "-tabs").height();
-            $(".tab-exp").css("top", top);
-
-            let tab = $(this).find("#first-tab-exp");
-            let state = tab.css("visibility");
-            tab.css("visibility", visibility[state]);
-
-            tab = $(this).find("#first-tab");
-            tab.css("background-color", color[state]);
-            tab.css("opacity", "1");
-            tab.css("border-bottom-style", "none");
-        });
+    let visibility = {visible: "hidden", hidden: "visible"}
+    $(".expand").click(function(e){
+        let el = $(this).parent().find(".hidden");
+        el.css("visibility", visibility[el.css("visibility")]);
     });
 
-    $(".tab").click(function(e){
-        let tabs = ["#first-tab-exp", "#second-tab-exp", "#third-tab-exp"];
-        for (let i of tabs){
-            let el = "#" + $(this).attr("id") + "-exp";
-            if (i == el){
-                $(el).css("visibility", "visible");
-                el = el.slice(0,-4);
-                $(this).css({"background-color": "F8F8F8",
-                             "opacity": "1",
-                             "border-bottom-style": "none"});
-            } else {
-                $(i).css("visibility", "hidden");
-                i = i.slice(0,-4);
-                el = $(this).parent().find(i);
-                el.css({"background-color": "E0E0E0",
-                        "border-bottom-style": "solid"});
-            }
-        }
+    $("#stay-btn").click(function(e){
+        $("#getting-around").css("opacity", "0");
+        let el = $("#where-to-stay");
+        el.css("visibility", visibility[el.css("visibility")]);
     });
-    /*
-    let i = 0;
-    $('#right-gallery-btn').click(function(e){
-        i++;
-        $('.vienna-img').css('transform', 'translateX(-' + i + '00%)');
-    });
-
-    $('#left-gallery-btn').click(function(e){
-        i--;
-        $('.vienna-img').css('transform', 'translateX(-' + i + '00%)');
-    });*/
 });
 
 $(window).on("load", () => {

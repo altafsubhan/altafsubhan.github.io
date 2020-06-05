@@ -751,67 +751,59 @@ a {
 
 #travel-text {
 	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.blank{
+	width: 80%;
+}
+
+.travel-text-div {
+	position: absolute;
+	visibility: hidden;
+	left: 15%;
+
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.travel-text-item{
+	width: 100%;
+	display: flex;
+}
+
+#bike-text {
+	margin: 2% 5% 5% 0;
+}
+
+#bike-text h4 {
+	margin-top: 0;
+}
+
+#side-bar {
+	width: 15%;
+	display: flex;
 	flex-direction: column;
 }
 
-.travel-text-desc {
-	display: flex;
-	flex-direction: row;
-
-	margin: 0 10% 0 10%;
-	padding-left: 1%;
-
-	height: 7%;
-	opacity: 0.7;
-}
-
-.travel-text-desc:hover {
-	cursor: pointer;
-	opacity: 1;
-
-	background-color: #e8f4f8;
-}
-
-.collapsed {
-	margin-top: 1.75%;
-	height: 50%;
-	margin-right: 0.5%;
-	transition: all 0.5s;
-}
-
-.travel-text-desc p {
-	font-family: "Raleway";
-	margin-top: 2.07%;
-	font-size: 2.5vh;
-}
-
-.travel-text-exp {
-	position: relative;
-	height: 300px;
-	width: 80%;
-	background-color: #E0E0E0;
-	display: none;
-	margin: 0 10% 0 10%;
-}
-
-.tabs-div {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 0;
+.hidden {
+	visibility: hidden;
+	padding-left: 10%;
+	background-color: #DCDCDC;
 }
 
 #side-bar h6 {
-	display: flex;
-	flex-direction: row;
 	opacity: 0.7;
 
 	font-size: 2vh;
 	font-weight: lighter;
 	font-family: "Raleway";
 
-	width: 10%;
-	padding-top: 2%;
-	padding-bottom: 1%;
+	padding-top: 15%;
+	padding-bottom: 15%;
 	margin-top: 0;
 	margin-bottom: 0%;
 
@@ -830,69 +822,15 @@ a {
 	cursor: pointer;
 }
 
-.tab-exp {
-	position: absolute;
-	left: 0%;
-	top: 0;
-	width: 96%;
-	height: 86%;
-
-	padding-left: 2%;
-	padding-right: 2%;
-
-	background-color: #F8F8F8;
+#vienna-bike, #vienna-card {
+	margin: 2% 5% 5% 5%;
+	width: 50%;
+	height: auto;
 }
 
-#first-tab-exp {
-	visibility: hidden;
-}
-
-#second-tab-exp {
-	visibility: hidden;
-}
-
-#third-tab-exp {
-	visibility: hidden;
-}
-
-#travel-gallery {
-	position: relative;
-	height: 70%;
-	background-color: black;
-
-	margin: 5% 10% 5% 10%;
-
+#getting-around {
+	width: 80%;
 	display: flex;
 	flex-direction: row;
-	overflow: hidden;
-}
-
-.vienna-img {
-	height: 100%;
-	width: 100%;
-	object-fit: contain;
-}
-
-#right-gallery-btn {
-	position: absolute;
-	right: 0;
-	top: 45%;
-	height: 10%;
-	z-index: 1000;
-}
-
-#left-gallery-btn {
-	position: absolute;
-	left: 0;
-	top: 45%;
-	height: 10%;
-	z-index: 1000;
-}
-
-#gallery-icon {
-	height: 100%;
-}
-
-#gallery-icon:hover {
-	cursor: pointer;
+	flex-wrap: wrap;
 }

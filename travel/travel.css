@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+}
+
+#main-collage{
+    height: auto;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+
+    /*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+}
+
+.collage-img {
+    object-fit: fill;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+    display: none
+}
+
+.collage-img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#lund-img {
+    position: absolute;
+    /*
+    width: 20%;
+    height: 20%;*/
+}
+
+#vienna-img {
+    position: absolute;
+    /*
+    width: 15%;
+    height: 35%;*/
+}
+
+#lisbon-img {
+    position: absolute;
+    /*
+    width: 12.5%;
+    height: 20%;*/
+}
+
+#rome-img {
+    position: absolute;
+    /*
+    width: 30.7%;
+    height: 20%;*/
+}
+
+#cph-img {
+    position: absolute;
+    /*
+    width: 10.89%;
+    height: 20%;*/
+}
+
+#malmo-img {
+    position: absolute;
+    /*
+    width: 10.06%;
+    height: 25%;*/
+}
+
+#death-valley-img {
+    position: absolute;
+    /*
+    transform: translateY(-50%);
+    width: 9.92%;
+    height: 15%;*/
+}
+
+#yosemite-img {
+    position: absolute;
+    /*
+    transform: translateY(-50%);
+    width: 9.92%;
+    height: 15%;*/
+}
+
+.blank {
+    width: 100%;
+    /*
+    width: 15%;
+    font-size: 15%;
+    background-color: black;
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;*/
+}
+
+#san-diego-img {
+    position: absolute;
+    /*
+    width: 12.5%;
+    height: 10%;
+
+    transform: translateY(-53.45%);*/
+}
+
+#oslo-img {
+    position: absolute;
+    /*
+    width: 17.2%;
+    height: 10%;
+    transform: translateY(-40.95%);*/
+}
+
+#ghent-img {
+    position: absolute;
+    /*
+    width: 17.2%;
+    height: 10%;
+    transform: translateY(-40.95%);*/
+}
+
+#prague-img {
+    position: absolute;
+    /*
+    width: 17.2%;
+    height: 10%;
+    transform: translateY(-40.95%);*/
+}
+
+#interlaken-img {
+    position: absolute;
+    /*
+    width: 20%;
+    height: 10%;
+    transform: translateY(-92.5%);*/
+}
+
+#london-img {
+    position: absolute;
+    /*
+    width: 15%;
+    height: 10%;
+    transform: translateY(-146.4%);*/
+}
+
+#lugano-img {
+    position: absolute;
+    /*
+    width: 19%;
+    height: 10%;
+    transform: translateY(-89.3%);*/
+}
+
+#geneva-img {
+    position: absolute;
+    /*
+    width: 10.65%;
+    height: 10%;
+    transform: translateY(-89%);*/
+}
+
+#stockholm-img {
+    position: absolute;
+    /*
+    width: 24.5%;
+    height: 10%;
+    transform: translateY(-89.1%);*/
+}
+
+#madrid-img {
+    position: absolute;
+    /*
+    width: 9.95%;
+    height: 10%;
+    transform: translateY(-89.15%);*/
+}
+
+#toledo-img {
+    position: absolute;
+    /*
+    width: 11.2%;
+    height: 10%;
+    transform: translateY(-128.7%);*/
+}
+
+#budapest-img {
+    position: absolute;
+    /*
+    width: 15.02%;
+    height: 10%;
+    transform: translate(57.8%, -303.4%);*/
+}
+
+#zaragoza-img {
+    position: absolute;
+    /*
+    width: 9.92%;
+    height: 10%;
+    transform: translate(-151%, -128.5%);*/
+}
+
+#lausanne-img {
+    position: absolute;
+    /*
+    width: 18%;
+    height: 10%;
+    transform: translate(-83.7%, -128%);*/
+}
+
+#milan-img {
+    position: absolute;
+    /*
+    width: 12%;
+    height: 10%;
+    transform: translate(-125%, -128%);*/
+}
+
+#skardu-img {
+    position: absolute;
+    /*
+    width: 11.55%;
+    height: 5%;
+    transform: translate(-13.7%, -129%);*/
+}
+
+#amalfi-img {
+    position: absolute;
+    /*
+    width: 22.82%;
+    height: 10%;
+    transform: translate(335.1%, -230.6%);*/
+}
+
+#naran-img {
+    position: absolute;
+    /*
+    width: 6.66%;
+    height: 5%;
+    transform: translate(421.3%, -449.35%);*/
+}
+
+#chicago-img {
+    position: absolute;
+    /*
+    width: 6.66%;
+    height: 5%;
+    transform: translate(421.7%, -449.35%);*/
+}
+
+#la-img {
+    position: absolute;
+    /*
+    width: 6.6%;
+    height: 5%;
+    transform: translate(224%, -352.5%);*/
+}
+
+#sf-img {
+    position: absolute;
+    /*
+    width: 6.66%;
+    height: 5%;
+    transform: translate(222.5%, -349.35%);*/
+}
