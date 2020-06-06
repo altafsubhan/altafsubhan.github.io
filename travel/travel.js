@@ -205,12 +205,36 @@ $(document).ready(function(){
             });
         }
     });
+
+    let globe = $("#globe");
+    setTimeout(function(){
+        globe.fadeOut(1000);
+    }, 1000);
+
+    let el = $("#text-container");
+    let padding = total_h/2 - el.height()/2 - 4;
+    el.css("padding-top", padding + "px");
+    setTimeout(()=>{
+        globe.css("display", "none");
+        el.css("display", "block");
+        setTimeout(showSign, 4000);
+    }, 3000);
 });
 
 $(window).on("load", function(){
     $(".collage-img").css("display", "block");
     $(".collage-lbl").css("display", "block");
 });
+
+function showSign(){
+    let el = $("#signature");
+    el.fadeIn(500);
+    setTimeout(hideLayover, 1500);
+}
+
+function hideLayover(){
+    $("#layover").fadeOut(2000);
+}
 
 /*
 $(window).on("load", () => {
