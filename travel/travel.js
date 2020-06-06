@@ -180,26 +180,37 @@ let total_h = $(window).height();
 $(document).ready(function(){
     $(".blank").height(total_h);
     $(".collage-img").each(function(){
-        let el = $(this);
-        let id = el.attr("id");
+        let img = $(this);
+        let id = img.attr("id");
+        let lbl = $("#" + id.replace("img", "lbl"));
+
         let h = dim[id]["height_c"] * total_h;
         let w = dim[id]["width_c"] * total_w;
         let top = dim[id]["top_c"] * total_h;
         let left = dim[id]["left_c"] * total_w;
 
-        el.css({
+        img.css({
             "height": h,
             "width": w,
             "top": top,
             "left": left
         });
+
+        if (lbl){
+            lbl.css({
+                "height": h,
+                "width": w,
+                "top": top,
+                "left": left
+            });
+        }
     });
-    /*$(".collage-img").css("display", "block");*/
 });
 
 $(window).on("load", function(){
     $(".collage-img").css("display", "block");
-})
+    $(".collage-lbl").css("display", "block");
+});
 
 /*
 $(window).on("load", () => {
