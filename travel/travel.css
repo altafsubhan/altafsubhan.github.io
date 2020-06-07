@@ -123,3 +123,24 @@ body {
     cursor: pointer;
     opacity: 0.9;
 }
+
+#destination-list {
+    margin: 5% 10% 5% 10%;
+    display: none;
+    flex-direction: column;
+}
+
+.destination-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.destination-text {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#interlaken-dest-img {
+    width: 20%;
+}

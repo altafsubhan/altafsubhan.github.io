@@ -234,6 +234,9 @@ function showSign(){
 
 function hideLayover(){
     $("#layover").fadeOut(2000);
+    $(".collage-img").css("display", "block");
+    $(".collage-lbl").css("display", "block");
+    $("#destination-list").css("display", "flex");
 }
 
 /*
