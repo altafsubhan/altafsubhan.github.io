@@ -178,6 +178,7 @@ let total_w = $(window).width();
 let total_h = $(window).height();
 
 $(document).ready(function(){
+   console.log("document ready");
     $(".blank").height(total_h);
     $(".collage-img").each(function(){
         let img = $(this);
@@ -205,8 +206,7 @@ $(document).ready(function(){
             });
             lbl.click(function(){
                let id = $(this).attr("id").replace("lbl", "div");
-               let offset = parseInt($("#" + id).offset().top);
-               console.log(id, offset/1.75);
+               let offset = parseInt($("#" + id).offset().top) - 80;
                $('html, body').animate({
                   scrollTop: offset
                }, offset/1.75);
@@ -215,19 +215,22 @@ $(document).ready(function(){
     });
 
     let globe = $("#globe");
+    let el = $("#text-container");
+
     setTimeout(function(){
         globe.fadeOut(500);
         globe.fadeIn(500);
         globe.fadeOut(500);
     }, 500);
 
-    let el = $("#text-container");
     let padding = total_h/2 - el.height()/2 - 4;
     el.css("padding-top", padding + "px");
+
     setTimeout(()=>{
-        globe.css("display", "none");
-        el.css("display", "block");
-        setTimeout(showSign, 4000);
+       console.log("start typing"); 
+       globe.css("display", "none");
+       el.css("display", "block");
+       setTimeout(showSign, 4000);
     }, 2500);
 });
 
@@ -239,12 +242,12 @@ $(window).on("load", function(){
 function showSign(){
     let el = $("#signature");
     el.fadeIn(500);
-    setTimeout(hideLayover, 1500);
+    setTimeout(hideLayover, 1000);
 }
 
 function hideLayover(){
-      $("#layover").fadeOut(2000);
-      $("#destination-list").css("display", "flex");
+   $("#layover").fadeOut(2000);
+   $("#destination-list").css("display", "flex");
 }
 
 /*
