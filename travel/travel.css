@@ -66,7 +66,7 @@ body {
 	font-family: "Montserrat Hairline";
 
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .05em solid black; /* The typwriter cursor */
+    border-right: .05em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em; /* Adjust as needed */
@@ -97,7 +97,7 @@ body {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: black; }
+    50% { border-color: orange; }
 }
 
 #signature {
@@ -157,20 +157,18 @@ body {
 .destination-div {
     display: flex;
     flex-direction: row;
-    padding: 4% 0 4% 0;
-    border-bottom: black;
+    padding: 4% 5% 4% 5%;
+    /*border-bottom: black;
     border-bottom-style: solid;
     border-bottom-width: .75px;
-    border-bottom-color: #f5f5f5;
-}
-
-.destination-div:hover {
-    border-bottom-color: #707070;
+    border-bottom-color: #f5f5f5;*/
 }
 
 .dest-img {
     width: 25%;
     object-fit: cover;
+    border-style: outset;
+    border-width: 2px;
 }
 
 .destination-text {
@@ -192,9 +190,32 @@ body {
     margin: 1% 0 0 0;
 }
 
+#btns {
+    flex-direction: row;
+}
+
 .destination-text button {
-    width: 100px;
-    margin: 2% 2% 0 0;
-    padding: 5px;
+    background-color: transparent;
+    opacity: 0.6;
+
     font-family: "Avenir Light";
+    font-size: .9em;
+
+    width: 5.5em;
+    margin: 3% 3% 0 0;
+    padding: 5px 0 1px 0;
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: 2px;
+}
+
+
+.destination-text button:hover {
+    cursor: pointer;
+    opacity: 1;
+    /*border-top-color: orange;*/
 }
