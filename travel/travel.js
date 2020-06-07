@@ -206,7 +206,7 @@ $(document).ready(function(){
             });
             lbl.click(function(){
                let id = $(this).attr("id").replace("lbl", "div");
-               let offset = parseInt($("#" + id).offset().top) - 80;
+               let offset = parseInt($("#" + id).offset().top) - 40;
                $('html, body').animate({
                   scrollTop: offset
                }, offset/1.75);

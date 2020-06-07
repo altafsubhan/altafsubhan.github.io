@@ -157,7 +157,7 @@ body {
 .destination-div {
     display: flex;
     flex-direction: row;
-    padding: 4% 5% 4% 5%;
+    padding: 4% 2.5% 4% 2.5%;
     /*border-bottom: black;
     border-bottom-style: solid;
     border-bottom-width: .75px;
@@ -165,7 +165,7 @@ body {
 }
 
 .dest-img {
-    width: 25%;
+    width: 30%;
     object-fit: cover;
     border-style: outset;
     border-width: 2px;
@@ -180,7 +180,7 @@ body {
 .destination-text h4 {
     font-family: "Montserrat Regular";
     font-size: 3vh;
-    margin: 0 0 1% 0;
+    margin: 0 0 2% 0;
 }
 
 .destination-text p {
