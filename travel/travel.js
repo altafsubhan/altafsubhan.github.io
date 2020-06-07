@@ -203,13 +203,23 @@ $(document).ready(function(){
                 "top": top,
                 "left": left
             });
+            lbl.click(function(){
+               let id = $(this).attr("id").replace("lbl", "div");
+               let offset = parseInt($("#" + id).offset().top);
+               console.log(id, offset/1.75);
+               $('html, body').animate({
+                  scrollTop: offset
+               }, offset/1.75);
+            });
         }
     });
 
     let globe = $("#globe");
     setTimeout(function(){
-        globe.fadeOut(1000);
-    }, 1000);
+        globe.fadeOut(500);
+        globe.fadeIn(500);
+        globe.fadeOut(500);
+    }, 500);
 
     let el = $("#text-container");
     let padding = total_h/2 - el.height()/2 - 4;
@@ -218,13 +228,13 @@ $(document).ready(function(){
         globe.css("display", "none");
         el.css("display", "block");
         setTimeout(showSign, 4000);
-    }, 3000);
+    }, 2500);
 });
 
 $(window).on("load", function(){
-    $(".collage-img").css("display", "block");
-    $(".collage-lbl").css("display", "block");
-});
+   $(".collage-img").css("display", "block");
+   $(".collage-lbl").css("display", "block");
+})
 
 function showSign(){
     let el = $("#signature");
@@ -233,10 +243,8 @@ function showSign(){
 }
 
 function hideLayover(){
-    $("#layover").fadeOut(2000);
-    $(".collage-img").css("display", "block");
-    $(".collage-lbl").css("display", "block");
-    $("#destination-list").css("display", "flex");
+      $("#layover").fadeOut(2000);
+      $("#destination-list").css("display", "flex");
 }
 
 /*
