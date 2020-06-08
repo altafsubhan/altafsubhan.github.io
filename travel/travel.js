@@ -178,60 +178,76 @@ let total_w = $(window).width();
 let total_h = $(window).height();
 
 $(document).ready(function(){
-   console.log("document ready");
-    $(".blank").height(total_h);
-    $(".collage-img").each(function(){
-        let img = $(this);
-        let id = img.attr("id");
-        let lbl = $("#" + id.replace("img", "lbl"));
+   $(".blank").height(total_h);
+   $(".collage-img").each(function(){
+      let img = $(this);
+      let id = img.attr("id");
+      let lbl = $("#" + id.replace("img", "lbl"));
 
-        let h = dim[id]["height_c"] * total_h;
-        let w = dim[id]["width_c"] * total_w;
-        let top = dim[id]["top_c"] * total_h;
-        let left = dim[id]["left_c"] * total_w;
+      let h = dim[id]["height_c"] * total_h;
+      let w = dim[id]["width_c"] * total_w;
+      let top = dim[id]["top_c"] * total_h;
+      let left = dim[id]["left_c"] * total_w;
 
-        img.css({
-            "height": h,
-            "width": w,
-            "top": top,
-            "left": left
-        });
+      img.css({
+         "height": h,
+         "width": w,
+         "top": top,
+         "left": left
+      });
 
-        if (lbl){
-            lbl.css({
-                "height": h,
-                "width": w,
-                "top": top,
-                "left": left
-            });
-            lbl.click(function(){
-               let id = $(this).attr("id").replace("lbl", "div");
-               let offset = parseInt($("#" + id).offset().top) - 40;
-               $('html, body').animate({
-                  scrollTop: offset
-               }, offset/1.75);
-            });
-        }
-    });
+      if (lbl){
+         lbl.css({
+               "height": h,
+               "width": w,
+               "top": top,
+               "left": left
+         });
+         lbl.click(function(){
+            let id = $(this).attr("id").replace("lbl", "div");
+            let offset = parseInt($("#" + id).offset().top) - 40;
+            $('html, body').animate({
+               scrollTop: offset
+            }, offset/1.75);
+         });
+      }
 
-    let globe = $("#globe");
-    let el = $("#text-container");
+      // use as little jquery as possible for better performance
+      document.getElementsByClassName("modal-content")[0].style.height = 0.8*total_h + "px";
+   });
 
-    setTimeout(function(){
-        globe.fadeOut(500);
-        globe.fadeIn(500);
-        globe.fadeOut(500);
-    }, 500);
+   let globe = $("#globe");
+   let el = $("#text-container");
 
-    let padding = total_h/2 - el.height()/2 - 4;
-    el.css("padding-top", padding + "px");
+   setTimeout(function(){
+      globe.fadeOut(500);
+      globe.fadeIn(500);
+      globe.fadeOut(500);
+   }, 500);
 
-    setTimeout(()=>{
-       console.log("start typing"); 
-       globe.css("display", "none");
-       el.css("display", "block");
-       setTimeout(showSign, 4000);
-    }, 2500);
+   let padding = total_h/2 - el.height()/2 - 4;
+   el.css("padding-top", padding + "px");
+
+   setTimeout(()=>{
+      globe.css("display", "none");
+      el.css("display", "block");
+      setTimeout(showSign, 4000);
+   }, 2500);
+
+   $('.photos-btn').click(function(e){
+      fillContent(e.target.parentElement.id);
+      $('.modal').fadeIn(250);
+   });
+
+   $('.vlog-btn').click(function(e){
+      window.open("https://www.youtube.com/watch?v=No10Ry0FaY0", "_blank");
+   });
+
+   window.addEventListener("click", (e) => {
+      if (e.target.className == "modal") {
+          $('.modal').fadeOut(250);
+      }
+   });
 });
 
 $(window).on("load", function(){
@@ -248,6 +264,12 @@ function showSign(){
 function hideLayover(){
    $("#layover").fadeOut(2000);
    $("#destination-list").css("display", "flex");
+}
+
+function fillContent(id){
+   id = id.split("-");
+   let title = id[0]  + ", " + id[1];
+   $(".modalTitle").text(title);
 }
 
 /*
