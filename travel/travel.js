@@ -212,8 +212,7 @@ $(document).ready(function(){
          });
       }
 
-      // use as little jquery as possible for better performance
-      document.getElementsByClassName("modal-content")[0].style.height = 0.8*total_h + "px";
+      $(".modal-content").css("margin-top", 0.1*total_h);
    });
 
    let globe = $("#globe");
@@ -266,10 +265,69 @@ function hideLayover(){
    $("#destination-list").css("display", "flex");
 }
 
+let data = {
+   vienna : {title: "Vienna, Austria", num: 16},
+   lund : {title : "Lund, Sweden"},
+   stockholm : {title : "Stockholm, Sweden"},
+   malmo : {title : "Malmo, Sweden"},
+   toledo : {title : "Toledo, Spain"},
+   madrid : {title : "Madrid, Spain"},
+   zaragoza : {title : "Zaragoza, Spain"},
+   copenhagen : {title : "Copenhagen, Denmark"},
+   budapest : {title : "Budapest, Hungary"},
+   prague : {title : "Prague, Czech Republic"},
+   london : {title : "London, England"},
+   barcelona : {title : "Barcelona, Spain"},
+   milan : {title : "Milan, Italy"},
+   ghent : {title : "Ghent, Belgium"},
+   lugano : {title : "Lugano, Switzerland"},
+   oslo : {title : "Oslo, Norway"},
+   sandiego : {title : "San Diego, USA"},
+   sanfrancisco : {title : "San Francisco, USA"},
+   losangeles : {title : "Los Angeles, USA"},
+   deathvalley : {title : "Death Valley National Park, USA"},
+   yosemite : {title : "Yosemite National Park, USA"},
+   rome : {title : "Rome, Italy"},
+   geneva : {title : "Geneva, Switzerland"},
+   lausanne : {title : "Lausanne, Switzerland"},
+   interlaken : {title : "Interlaken, Switzerland"},
+   amalfi : {title : "Amalfi Coast, Italy"},
+   skardu : {title : "Skardu, Pakistan"},
+   naran : {title : "Naran, Pakistan"},
+   chicago : {title : "Chicago, USA"}
+}
+
+let curr_pic_idx = 1;
+
 function fillContent(id){
-   id = id.split("-");
-   let title = id[0]  + ", " + id[1];
+   id = id.split("-")[0];
+   title = data[id]["title"];
+
    $(".modalTitle").text(title);
+   $(".arrow-btn").on("click", function(){
+      if ($(this).attr("id") == "right-btn")
+         curr_pic_idx = curr_pic_idx + 1 > data[id]["num"] ? 1 : curr_pic_idx + 1;
+      else
+         curr_pic_idx = curr_pic_idx - 1 < 1 ? data[id]["num"] : curr_pic_idx - 1;
+   
+      console.log(curr_pic_idx);
+      showModalPic(id);
+   });
+   showModalPic(id);
+}
+
+function showModalPic(id){
+   let next =  curr_pic_idx % 2;
+   let prev = 1 - next;
+   let a = $(".modalPic" + next);
+   let b = $(".modalPic" + prev);
+
+   b.fadeOut(400);
+   a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
+   setTimeout(function(){
+      a.fadeIn(400);
+      b.css("display", "none");
+   }, 400);
 }
 
 /*
