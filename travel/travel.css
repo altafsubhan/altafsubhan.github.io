@@ -60,14 +60,14 @@ body {
 }
 
 #text-container {
-    width: 44em;
+    width: 43em;
     margin: auto;
     text-align: center;
     display: none;
 }
 
 #intro-text {
-    font-size: 5vh;
+    font-size: 2.5em;
 	font-family: "Montserrat Hairline";
 
     overflow: hidden; /* Ensures the content is not revealed until the animation */
