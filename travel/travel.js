@@ -176,6 +176,7 @@ let dim = {
 }
 let total_w = $(window).width();
 let total_h = $(window).height();
+let curr_pic_idx = 1;
 
 $(document).ready(function(){
    $(".blank").height(total_h);
@@ -244,7 +245,10 @@ $(document).ready(function(){
 
    window.addEventListener("click", (e) => {
       if (e.target.className == "modal") {
-          $('.modal').fadeOut(250);
+         $('.modal').fadeOut(250);
+         $(".arrow-btn").unbind();
+         $(".modalPic").css("display", "none");
+         curr_pic_idx = 1;
       }
    });
 });
@@ -277,6 +281,7 @@ let data = {
    budapest : {title : "Budapest, Hungary"},
    prague : {title : "Prague, Czech Republic"},
    london : {title : "London, England"},
+   lisbon : {title : "Lisbon, Portugal"},
    barcelona : {title : "Barcelona, Spain"},
    milan : {title : "Milan, Italy"},
    ghent : {title : "Ghent, Belgium"},
@@ -297,7 +302,6 @@ let data = {
    chicago : {title : "Chicago, USA"}
 }
 
-let curr_pic_idx = 1;
 
 function fillContent(id){
    id = id.split("-")[0];
@@ -311,23 +315,29 @@ function fillContent(id){
          curr_pic_idx = curr_pic_idx - 1 < 1 ? data[id]["num"] : curr_pic_idx - 1;
    
       console.log(curr_pic_idx);
-      showModalPic(id);
+      showModalPic(id, false);
    });
-   showModalPic(id);
+   showModalPic(id, true);
 }
 
-function showModalPic(id){
-   let next =  curr_pic_idx % 2;
-   let prev = 1 - next;
-   let a = $(".modalPic" + next);
-   let b = $(".modalPic" + prev);
+function showModalPic(id, first){
+   if (first){
+      let a = $("#modalPic1");
+      a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
+      a.css("display", "block");
+   } else {
+      let next =  curr_pic_idx % 2;
+      let prev = 1 - next;
+      let a = $("#modalPic" + next);
+      let b = $("#modalPic" + prev);
 
-   b.fadeOut(400);
-   a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
-   setTimeout(function(){
-      a.fadeIn(400);
-      b.css("display", "none");
-   }, 400);
+      b.fadeOut(300);
+      setTimeout(function(){
+         a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
+         a.fadeIn(300);
+         b.css("display", "none");
+      }, 200);
+   }
 }
 
 /*
