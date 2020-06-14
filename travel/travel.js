@@ -333,7 +333,8 @@ function showModalPic(id, first){
       let b = $("#modalPic" + prev);
 
       b.fadeOut(300);
-      setTimeout(function(){
+      setTimeout(function() {
+         a.css("display", "none");
          a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
          a.fadeIn(300);
          b.css("display", "none");
