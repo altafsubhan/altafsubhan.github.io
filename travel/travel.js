@@ -292,7 +292,7 @@ let data = {
    losangeles : {title : "Los Angeles, USA"},
    deathvalley : {title : "Death Valley National Park, USA"},
    yosemite : {title : "Yosemite National Park, USA"},
-   rome : {title : "Rome, Italy"},
+   rome : {title : "Rome, Italy and Vatican City", num: 52},
    geneva : {title : "Geneva, Switzerland"},
    lausanne : {title : "Lausanne, Switzerland"},
    interlaken : {title : "Interlaken, Switzerland"},
@@ -317,6 +317,7 @@ function fillContent(id){
       console.log(curr_pic_idx);
       showModalPic(id, false);
    });
+
    showModalPic(id, true);
 }
 

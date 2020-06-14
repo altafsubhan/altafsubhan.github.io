@@ -251,7 +251,6 @@ body {
 
 	font-family: "Montserrat Light";
     font-size: 2.5vh;
-    text-transform: capitalize;
     
     color: white;
     background-color: rgba(0, 0, 0, 1);
@@ -291,6 +290,8 @@ body {
 .modalPic {
     max-width: 100%;
     max-height: 100%;
+    height: 100%;
+    object-fit: contain;
     margin: auto;
     display: none;
 }
