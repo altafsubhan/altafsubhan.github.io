@@ -323,6 +323,7 @@ function fillContent(id){
 
 function showModalPic(id, first){
    if (first){
+      $(".modalPic").css("display", "none");
       let a = $("#modalPic1");
       a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
       a.css("display", "block");
@@ -332,6 +333,7 @@ function showModalPic(id, first){
       let a = $("#modalPic" + next);
       let b = $("#modalPic" + prev);
 
+      a.css("display", "none");
       b.fadeOut(300);
       setTimeout(function() {
          a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
