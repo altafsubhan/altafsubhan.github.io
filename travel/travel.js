@@ -270,7 +270,7 @@ function hideLayover(){
 }
 
 let data = {
-   vienna : {title: "Vienna, Austria", num: 16},
+   vienna : {title: "Vienna, Austria", num: 48},
    lund : {title : "Lund, Sweden"},
    stockholm : {title : "Stockholm, Sweden"},
    malmo : {title : "Malmo, Sweden"},
@@ -281,11 +281,11 @@ let data = {
    budapest : {title : "Budapest, Hungary"},
    prague : {title : "Prague, Czech Republic"},
    london : {title : "London, England"},
-   lisbon : {title : "Lisbon, Portugal"},
+   lisbon : {title : "Lisbon, Portugal", num: 28},
    barcelona : {title : "Barcelona, Spain"},
    milan : {title : "Milan, Italy"},
    ghent : {title : "Ghent, Belgium"},
-   lugano : {title : "Lugano, Switzerland"},
+   lugano : {title : "Lugano, Switzerland", num: 27},
    oslo : {title : "Oslo, Norway"},
    sandiego : {title : "San Diego, USA"},
    sanfrancisco : {title : "San Francisco, USA"},
