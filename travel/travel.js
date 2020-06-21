@@ -335,18 +335,16 @@ function showModalPic(id, first){
       a.css("display", "none");
       a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
 
-      b.fadeOut(300);
+      b.fadeOut(250);
       setTimeout(function() {
-         a.fadeIn(300);
+         a.fadeIn(250);
          loadPicsToCache(id);
-      }, 200);
+      }, 220);
    }
 }
 
 function loadPicsToCache(id){
    let idx = curr_pic_idx + 1;
-   document.getElementById("cache").src = "resources/" + id + "/" + id + "_" + idx + ".jpg";
-   idx++;
    document.getElementById("cache").src = "resources/" + id + "/" + id + "_" + idx + ".jpg";
 }
 
