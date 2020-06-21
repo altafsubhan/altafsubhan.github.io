@@ -327,7 +327,7 @@ function showModalPic(id, first){
       a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
       a.css("display", "block");
    } else {
-      let next =  idx % 2;
+      let next =  curr_pic_idx % 2;
       let prev = 1 - next;
       let a = $("#modalPic" + next);
       let b = $("#modalPic" + prev);
