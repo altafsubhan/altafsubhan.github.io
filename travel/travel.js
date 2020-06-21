@@ -294,7 +294,7 @@ let data = {
    yosemite : {title : "Yosemite National Park, USA"},
    rome : {title : "Rome, Italy and Vatican City", num: 52},
    geneva : {title : "Geneva, Switzerland"},
-   lausanne : {title : "Lausanne, Switzerland"},
+   lausanne : {title : "Lausanne, Switzerland", num: 28},
    interlaken : {title : "Interlaken, Switzerland"},
    amalfi : {title : "Amalfi Coast, Italy"},
    skardu : {title : "Skardu, Pakistan"},
@@ -338,9 +338,9 @@ function showModalPic(id, first){
       b.fadeOut(250);
       setTimeout(function() {
          a.fadeIn(250);
-         loadPicsToCache(id);
       }, 220);
    }
+   loadPicsToCache(id);
 }
 
 function loadPicsToCache(id){
