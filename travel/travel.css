@@ -319,3 +319,7 @@ body {
     width: 3.5%;
     opacity: 1;
 }
+
+#cache {
+    display: none !important;
+}

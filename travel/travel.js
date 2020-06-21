@@ -338,32 +338,17 @@ function showModalPic(id, first){
       b.fadeOut(300);
       setTimeout(function() {
          a.fadeIn(300);
+         loadPicsToCache(id);
       }, 200);
    }
 }
 
-/*
-function showModalPic(id, first){
-   if (first){
-      $(".modalPic").css("display", "none");
-      let a = $("#modalPic1");
-      a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
-      a.css("display", "block");
-   } else {
-      let next =  idx % 2;
-      let prev = 1 - next;
-      let a = $("#modalPic" + next);
-      let b = $("#modalPic" + prev);
-
-      a.css("display", "none");
-      b.fadeOut(300);
-      setTimeout(function() {
-         a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
-         a.fadeIn(300);
-         b.css("display", "none");
-      }, 200);
-   }
-}*/
+function loadPicsToCache(id){
+   let idx = curr_pic_idx + 1;
+   document.getElementById("cache").src = "resources/" + id + "/" + id + "_" + idx + ".jpg";
+   idx++;
+   document.getElementById("cache").src = "resources/" + id + "/" + id + "_" + idx + ".jpg";
+}
 
 /*
 $(window).on("load", () => {
