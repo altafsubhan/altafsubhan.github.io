@@ -259,18 +259,14 @@ body {
     border-bottom-style: none;
 }
 
-.modalTitle:hover {
-    font-size: 2.5vh;
-}
-
 .modalCaption {
     position: fixed;
     margin: auto;
     padding: 10px 0;
     z-index: 10;
     text-align: center;
-    font-family: "Montserrat Light";
-    font-size: 2.5vh;
+    font-family: "Montserrat Ultralight";
+    font-size: 2vh;
     color: white;
     background-color: rgba(0, 0, 0, 1);
     border: 1px solid #888;

@@ -48,10 +48,16 @@ let dim = {
        "height_c":0.1739878197320341
     },
     "san-diego-img":{
-       "top_c":0.14600525645768309,
+       "top_c":0.14500525645768309,//0.14600525645768309,
        "left_c":0.3525607638888889,
        "width_c":0.125,
-       "height_c":0.38525822168087703
+       "height_c":0.2179282013943076//0.2061809767468693//0.38525822168087703
+    },
+    "barcelona-img":{
+       "top_c":0.3659334578519907,//0.3531862332045524, //0.3521862332045524,
+       "left_c":0.3525607638888889,
+       "width_c":0.125,
+       "height_c":0.16443361753958588//0.17718084218702418//0.17907724493400773//0.2630937880633374
     },
     "oslo-img":{
        "top_c":0.22869594262665577,
@@ -72,40 +78,40 @@ let dim = {
        "height_c":0.3016711327649208
     },
     "interlaken-img":{
-       "top_c":0.4402053591394831,
+       "top_c":0.4412053591394831,
        "left_c":0,
        "width_c":0.2,
-       "height_c":0.3226626065773447
+       "height_c":0.3216626065773447
     },
     "london-img":{
-       "top_c":0.3521862332045524,
+       "top_c":0.3531862332045524,//0.3521862332045524,
        "left_c":0.2013888888888889,
        "width_c":0.15,
-       "height_c":0.2630937880633374
+       "height_c":0.2610937880633374
     },
     "lugano-img":{
        "top_c":0.5332905517280755,
        "left_c":0.3527777777777778,
        "width_c":0.18999583333333334,
-       "height_c":0.23007429963459194
+       "height_c":0.22905011722318436//0.23007429963459194
     },
     "geneva-img":{
        "top_c":0.5337509545571331,
        "left_c":0.5441623263888888,
        "width_c":0.10649930555555556,
-       "height_c":0.23033982947624848
+       "height_c":0.22905011722318436//0.23033982947624848
     },
     "stockholm-img":{
        "top_c":0.5337725138693286,
        "left_c":0.65205078125,
        "width_c":0.24499791666666668,
-       "height_c":0.23005481120584653
+       "height_c":0.22905011722318436//0.23005481120584653
     },
     "madrid-img":{
        "top_c":0.5332321185577802,
        "left_c":0.8984375,
        "width_c":0.09949027777777777,
-       "height_c":0.23053105968331303
+       "height_c":0.22905011722318436//0.23053105968331303
     },
     "toledo-img":{
        "top_c":0.7645027262865408,
@@ -115,8 +121,8 @@ let dim = {
     },
     "budapest-img":{
        "top_c":0.6166719722399322,
-       "left_c":0.20099457634819878,
-       "width_c":0.15019513888888888,
+       "left_c":0.2013888888888889,//0.20099457634819878,
+       "width_c":0.15, //019513888888888,
        "height_c":0.14566869671132765
     },
     "zaragoza-img":{
@@ -209,7 +215,7 @@ $(document).ready(function(){
             let offset = parseInt($("#" + id).offset().top) - 40;
             $('html, body').animate({
                scrollTop: offset
-            }, offset/1.75);
+            }, offset/2);
          });
       }
 
@@ -251,6 +257,16 @@ $(document).ready(function(){
          curr_pic_idx = 1;
       }
    });
+
+   /*window.addEventListener("keydown", function(e){
+      console.log(e.keyCode);
+      if (e.keyCode == 39 )
+         curr_pic_idx = curr_pic_idx + 1 > data[id]["num"] ? 1 : curr_pic_idx + 1;
+      //else
+      //   curr_pic_idx = curr_pic_idx - 1 < 1 ? data[id]["num"] : curr_pic_idx - 1;
+   
+      //showModalPic(id, false);
+   })*/
 });
 
 $(window).on("load", function(){
@@ -273,30 +289,30 @@ let data = {
    vienna : {title: "Vienna, Austria", num: 48},
    lund : {title : "Lund, Sweden"},
    stockholm : {title : "Stockholm, Sweden"},
-   malmo : {title : "Malmo, Sweden"},
+   malmo : {title : "Malmo, Sweden", num: 26},
    toledo : {title : "Toledo, Spain"},
-   madrid : {title : "Madrid, Spain"},
-   zaragoza : {title : "Zaragoza, Spain"},
-   copenhagen : {title : "Copenhagen, Denmark"},
+   madrid : {title : "Madrid, Spain", num: 24},
+   zaragoza : {title : "Zaragoza, Spain", num: 31},
+   copenhagen : {title : "Copenhagen, Denmark", num: 35},
    budapest : {title : "Budapest, Hungary"},
    prague : {title : "Prague, Czech Republic"},
    london : {title : "London, England"},
    lisbon : {title : "Lisbon, Portugal", num: 28},
-   barcelona : {title : "Barcelona, Spain"},
-   milan : {title : "Milan, Italy"},
-   ghent : {title : "Ghent, Belgium"},
+   barcelona : {title : "Barcelona, Spain", num: 54},
+   milan : {title : "Milan, Italy", num: 46},
+   ghent : {title : "Ghent, Belgium", num: 46},
    lugano : {title : "Lugano, Switzerland", num: 27},
-   oslo : {title : "Oslo, Norway"},
+   oslo : {title : "Oslo, Norway", num: 41},
    sandiego : {title : "San Diego, USA"},
    sanfrancisco : {title : "San Francisco, USA"},
    losangeles : {title : "Los Angeles, USA"},
    deathvalley : {title : "Death Valley National Park, USA"},
    yosemite : {title : "Yosemite National Park, USA"},
    rome : {title : "Rome, Italy and Vatican City", num: 52},
-   geneva : {title : "Geneva, Switzerland"},
+   geneva : {title : "Geneva, Switzerland", num: 20},
    lausanne : {title : "Lausanne, Switzerland", num: 28},
    interlaken : {title : "Interlaken, Switzerland"},
-   amalfi : {title : "Amalfi Coast, Italy"},
+   amalfi : {title : "Amalfi Coast, Italy", num: 30},
    skardu : {title : "Skardu, Pakistan"},
    naran : {title : "Naran, Pakistan"},
    chicago : {title : "Chicago, USA"}
