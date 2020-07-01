@@ -48,16 +48,16 @@ let dim = {
        "height_c":0.1739878197320341
     },
     "san-diego-img":{
-       "top_c":0.14500525645768309,//0.14600525645768309,
+       "top_c":0.14500525645768309,
        "left_c":0.3525607638888889,
        "width_c":0.125,
-       "height_c":0.2179282013943076//0.2061809767468693//0.38525822168087703
+       "height_c":0.2179282013943076
     },
     "barcelona-img":{
-       "top_c":0.3659334578519907,//0.3531862332045524, //0.3521862332045524,
+       "top_c":0.3659334578519907,
        "left_c":0.3525607638888889,
        "width_c":0.125,
-       "height_c":0.16443361753958588//0.17718084218702418//0.17907724493400773//0.2630937880633374
+       "height_c":0.16443361753958588
     },
     "oslo-img":{
        "top_c":0.22869594262665577,
@@ -84,7 +84,7 @@ let dim = {
        "height_c":0.3216626065773447
     },
     "london-img":{
-       "top_c":0.3531862332045524,//0.3521862332045524,
+       "top_c":0.3531862332045524,
        "left_c":0.2013888888888889,
        "width_c":0.15,
        "height_c":0.2610937880633374
@@ -93,25 +93,25 @@ let dim = {
        "top_c":0.5332905517280755,
        "left_c":0.3527777777777778,
        "width_c":0.18999583333333334,
-       "height_c":0.22905011722318436//0.23007429963459194
+       "height_c":0.22905011722318436
     },
     "geneva-img":{
        "top_c":0.5337509545571331,
        "left_c":0.5441623263888888,
        "width_c":0.10649930555555556,
-       "height_c":0.22905011722318436//0.23033982947624848
+       "height_c":0.22905011722318436
     },
     "stockholm-img":{
        "top_c":0.5337725138693286,
        "left_c":0.65205078125,
        "width_c":0.24499791666666668,
-       "height_c":0.22905011722318436//0.23005481120584653
+       "height_c":0.22905011722318436
     },
     "madrid-img":{
        "top_c":0.5332321185577802,
        "left_c":0.8984375,
        "width_c":0.09949027777777777,
-       "height_c":0.22905011722318436//0.23053105968331303
+       "height_c":0.22905011722318436
     },
     "toledo-img":{
        "top_c":0.7645027262865408,
@@ -121,8 +121,8 @@ let dim = {
     },
     "budapest-img":{
        "top_c":0.6166719722399322,
-       "left_c":0.2013888888888889,//0.20099457634819878,
-       "width_c":0.15, //019513888888888,
+       "left_c":0.2013888888888889,
+       "width_c":0.15, 
        "height_c":0.14566869671132765
     },
     "zaragoza-img":{
@@ -144,25 +144,25 @@ let dim = {
        "height_c":0.23277588306942754
     },
     "skardu-img":{
-       "top_c":0.7653711205132842,
+       "top_c":0.7649490040489875,
        "left_c":0.6523028903537327,
        "width_c":0.11549444444444446,
-       "height_c":0.23062606577344702
+       "height_c":0.23277588306942754
     },
     "amalfi-img":{
-       "top_c":0.7658188851248477,
+       "top_c":0.7649490040489875,
        "left_c":0.7693192376030816,
        "width_c":0.22819027777777778,
-       "height_c":0.22978806333739343
+       "height_c":0.23277588306942754
     },
     "naran-img":{
-        "top_c":0.7656386046694199,
+        "top_c":0.7649490040489875,//7656386046694199,
         "left_c":0.5164756774902344,
         "width_c":0.0659938888888889,
         "height_c":0.11677831912302071
      },
     "chicago-img":{
-       "top_c":0.7656386046694199,
+       "top_c":0.7649490040489875,//7656386046694199,
        "left_c":0.5842286003960504,
        "width_c":0.06659069444444445,
        "height_c":0.11677831912302071
@@ -171,18 +171,19 @@ let dim = {
        "top_c":0.8847204247868453,
        "left_c":0.5164756774902344,
        "width_c":0.0659938888888889,
-       "height_c":0.11575054811205847
+       "height_c":0.11300446233156963//0.11575054811205847
     },
     "sf-img":{
        "top_c":0.8847865152300929,
        "left_c":0.5841756184895833,
        "width_c":0.06659069444444445,
-       "height_c":0.1167973203410475
+       "height_c":0.11300446233156963//0.1167973203410475
     }
 }
 let total_w = $(window).width();
 let total_h = $(window).height();
 let curr_pic_idx = 1;
+let curr_id = "";
 
 $(document).ready(function(){
    $(".blank").height(total_h);
@@ -255,18 +256,21 @@ $(document).ready(function(){
          $(".arrow-btn").unbind();
          $(".modalPic").css("display", "none");
          curr_pic_idx = 1;
+         curr_id = "";
       }
    });
 
-   /*window.addEventListener("keydown", function(e){
-      console.log(e.keyCode);
-      if (e.keyCode == 39 )
-         curr_pic_idx = curr_pic_idx + 1 > data[id]["num"] ? 1 : curr_pic_idx + 1;
-      //else
-      //   curr_pic_idx = curr_pic_idx - 1 < 1 ? data[id]["num"] : curr_pic_idx - 1;
+   window.addEventListener("keydown", function(e){
+      if ($(".modal").css("display") !== "none"){
+         console.log(e.keyCode);
+         if (e.keyCode == 39 )
+            curr_pic_idx = curr_pic_idx + 1 > data[curr_id]["num"] ? 1 : curr_pic_idx + 1;
+         else if (e.keyCode == 37)
+            curr_pic_idx = curr_pic_idx - 1 < 1 ? data[curr_id]["num"] : curr_pic_idx - 1;
    
-      //showModalPic(id, false);
-   })*/
+         showModalPic(false);
+      }
+   });
 });
 
 $(window).on("load", function(){
@@ -321,6 +325,7 @@ let data = {
 
 function fillContent(id){
    id = id.split("-")[0];
+   curr_id = id;
    title = data[id]["title"];
 
    $(".modalTitle").text(title);
@@ -330,19 +335,20 @@ function fillContent(id){
       else
          curr_pic_idx = curr_pic_idx - 1 < 1 ? data[id]["num"] : curr_pic_idx - 1;
    
-      showModalPic(id, false);
+      showModalPic(false);
    });
 
-   showModalPic(id, true);
+   showModalPic(true);
 }
 
-function showModalPic(id, first){
+function showModalPic(first){
    if (first){
       $(".modalPic").css("display", "none");
       let a = $("#modalPic1");
-      a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
+      a.attr("src", "resources/" + curr_id + "/" + curr_id + "_" + curr_pic_idx + ".jpg");
       setTimeout(function(){
          a.css("display", "block");
+         $(".modalCaption").text(curr_id + " " + curr_pic_idx);
       }, 50);
    } else {
       let next =  curr_pic_idx % 2;
@@ -351,19 +357,20 @@ function showModalPic(id, first){
       let b = $("#modalPic" + prev);
 
       a.css("display", "none");
-      a.attr("src", "resources/" + id + "/" + id + "_" + curr_pic_idx + ".jpg");
+      a.attr("src", "resources/" + curr_id + "/" + curr_id + "_" + curr_pic_idx + ".jpg");
 
       b.fadeOut(250);
       setTimeout(function() {
          a.fadeIn(250);
+         $(".modalCaption").text(curr_id + " " + curr_pic_idx);
       }, 220);
    }
-   loadPicsToCache(id);
+   loadPicsToCache();
 }
 
-function loadPicsToCache(id){
+function loadPicsToCache(){
    let idx = curr_pic_idx + 1;
-   document.getElementById("cache").src = "resources/" + id + "/" + id + "_" + idx + ".jpg";
+   document.getElementById("cache").src = "resources/" + curr_id + "/" + curr_id + "_" + idx + ".jpg";
 }
 
 /*
