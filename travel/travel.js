@@ -216,7 +216,7 @@ $(document).ready(function(){
             let offset = parseInt($("#" + id).offset().top) - 40;
             $('html, body').animate({
                scrollTop: offset
-            }, offset/2);
+            }, offset/3);
          });
       }
 
@@ -263,12 +263,13 @@ $(document).ready(function(){
    window.addEventListener("keydown", function(e){
       if ($(".modal").css("display") !== "none"){
          console.log(e.keyCode);
-         if (e.keyCode == 39 )
+         if (e.keyCode == 39 ){
             curr_pic_idx = curr_pic_idx + 1 > data[curr_id]["num"] ? 1 : curr_pic_idx + 1;
-         else if (e.keyCode == 37)
+            showModalPic(false);
+         } else if (e.keyCode == 37) {
             curr_pic_idx = curr_pic_idx - 1 < 1 ? data[curr_id]["num"] : curr_pic_idx - 1;
-   
-         showModalPic(false);
+            showModalPic(false);
+         }
       }
    });
 });
@@ -292,7 +293,7 @@ function hideLayover(){
 let data = {
    vienna : {title: "Vienna, Austria", num: 48},
    lund : {title : "Lund, Sweden"},
-   stockholm : {title : "Stockholm, Sweden"},
+   stockholm : {title : "Stockholm, Sweden", num: 61},
    malmo : {title : "Malmo, Sweden", num: 26},
    toledo : {title : "Toledo, Spain"},
    madrid : {title : "Madrid, Spain", num: 24},
