@@ -216,7 +216,7 @@ $(document).ready(function(){
             let offset = parseInt($("#" + id).offset().top) - 40;
             $('html, body').animate({
                scrollTop: offset
-            }, offset/3);
+            }, offset/4);
          });
       }
 
@@ -300,8 +300,8 @@ let data = {
    zaragoza : {title : "Zaragoza, Spain", num: 31},
    copenhagen : {title : "Copenhagen, Denmark", num: 35},
    budapest : {title : "Budapest, Hungary"},
-   prague : {title : "Prague, Czech Republic"},
-   london : {title : "London, England"},
+   prague : {title : "Prague, Czech Republic", num: 50},
+   london : {title : "London, England", num: 51},
    lisbon : {title : "Lisbon, Portugal", num: 28},
    barcelona : {title : "Barcelona, Spain", num: 54},
    milan : {title : "Milan, Italy", num: 46},
@@ -316,7 +316,7 @@ let data = {
    rome : {title : "Rome, Italy and Vatican City", num: 52},
    geneva : {title : "Geneva, Switzerland", num: 20},
    lausanne : {title : "Lausanne, Switzerland", num: 28},
-   interlaken : {title : "Interlaken, Switzerland"},
+   interlaken : {title : "Interlaken, Switzerland", num:40},
    amalfi : {title : "Amalfi Coast, Italy", num: 30},
    skardu : {title : "Skardu, Pakistan"},
    naran : {title : "Naran, Pakistan"},
