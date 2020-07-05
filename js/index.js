@@ -1,10 +1,10 @@
 $(document).ready(() => {
     var w = window.innerWidth;
 
-    // detect mobile device
+    /* detect mobile device
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         alert('This website is not designed for mobile screens. Please use a laptop for better experience!');
-    }
+    }*/
 
     // scroll for icon buttons
     $('.experienceIcon').click(function(){

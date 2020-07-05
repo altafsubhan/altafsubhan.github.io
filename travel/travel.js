@@ -23,7 +23,7 @@ let dim = {
        "width_c":0.3069986111111111,
        "height_c":0.22577222898903776
     },
-    "cph-img":{
+    "copenhagen-img":{
        "top_c":0,
        "left_c":0.7875542534722222,
        "width_c":0.10889722222222223,
@@ -35,7 +35,7 @@ let dim = {
        "width_c":0.10059652777777778,
        "height_c":0.22474543239951278
     },
-    "death-valley-img":{
+    "deathvalley-img":{
        "top_c":0.2650159866017052,
        "left_c":0,
        "width_c":0.09919722222222221,
@@ -47,7 +47,7 @@ let dim = {
        "width_c":0.09919722222222221,
        "height_c":0.1739878197320341
     },
-    "san-diego-img":{
+    "sandiego-img":{
        "top_c":0.14500525645768309,
        "left_c":0.3525607638888889,
        "width_c":0.125,
@@ -167,13 +167,13 @@ let dim = {
        "width_c":0.06659069444444445,
        "height_c":0.11677831912302071
     },
-    "la-img":{
+    "losangeles-img":{
        "top_c":0.8847204247868453,
        "left_c":0.5164756774902344,
        "width_c":0.0659938888888889,
        "height_c":0.11300446233156963//0.11575054811205847
     },
-    "sf-img":{
+    "sanfrancisco-img":{
        "top_c":0.8847865152300929,
        "left_c":0.5841756184895833,
        "width_c":0.06659069444444445,
@@ -186,60 +186,35 @@ let curr_pic_idx = 1;
 let curr_id = "";
 
 $(document).ready(function(){
-   $(".blank").height(total_h);
-   $(".collage-img").each(function(){
-      let img = $(this);
-      let id = img.attr("id");
-      let lbl = $("#" + id.replace("img", "lbl"));
-
-      let h = dim[id]["height_c"] * total_h;
-      let w = dim[id]["width_c"] * total_w;
-      let top = dim[id]["top_c"] * total_h;
-      let left = dim[id]["left_c"] * total_w;
-
-      img.css({
-         "height": h,
-         "width": w,
-         "top": top,
-         "left": left
-      });
-
-      if (lbl){
-         lbl.css({
-               "height": h,
-               "width": w,
-               "top": top,
-               "left": left
-         });
-         lbl.click(function(){
-            let id = $(this).attr("id").replace("lbl", "div");
-            let offset = parseInt($("#" + id).offset().top) - 40;
-            $('html, body').animate({
-               scrollTop: offset
-            }, offset/4);
-         });
-      }
-
-      $(".modal-content").css("margin-top", 0.1*total_h);
-   });
-
    let globe = $("#globe");
-   let el = $("#text-container");
+   if( !(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+      showCollage();
+      let el = $("#text-container");
 
-   setTimeout(function(){
-      globe.fadeOut(500);
-      globe.fadeIn(500);
-      globe.fadeOut(500);
-   }, 500);
+      setTimeout(function(){
+         globe.fadeOut(500);
+      }, 500);
 
-   let padding = total_h/2 - el.height()/2 - 4;
-   el.css("padding-top", padding + "px");
+      let padding = total_h/2 - el.height()/2 - 4;
+      el.css("padding-top", padding + "px");
 
-   setTimeout(()=>{
-      globe.css("display", "none");
-      el.css("display", "block");
-      setTimeout(showSign, 4000);
-   }, 2500);
+      setTimeout(()=>{
+         globe.css("display", "none");
+         el.css("display", "block");
+         setTimeout(showSign, 3000);
+      }, 1500);
+   } else {
+      $(".inner-div").css("width", "100%");
+      $(".outer-div").css("flex-wrap", "wrap");
+      setTimeout(function(){
+         globe.fadeOut(500);
+      }, 500);
+      setTimeout(function(){
+         hideLayover(500);
+      }, 800);
+   }
+   
+   $(".modal-content").css("margin-top", 0.1*total_h);
 
    $('.photos-btn').click(function(e){
       fillContent(e.target.parentElement.id);
@@ -274,20 +249,67 @@ $(document).ready(function(){
    });
 });
 
+$(window).resize(function(){
+   total_h = $(window).height();
+   total_w = $(window).width();
+   showCollage();
+});
+
 $(window).on("load", function(){
    $(".collage-img").css("display", "block");
    $(".collage-lbl").css("display", "block");
-})
+});
+
+function showCollage(){
+   $(".blank").height(total_h);
+   $(".collage-img").each(function(){
+      let img = $(this);
+      let id = img.attr("id");
+      let lbl = $("#" + id.replace("img", "lbl"));
+      let plc = id.split("-")[0];
+
+      let h = dim[id]["height_c"] * total_h;
+      let w = dim[id]["width_c"] * total_w;
+      let top = dim[id]["top_c"] * total_h;
+      let left = dim[id]["left_c"] * total_w;
+
+      img.attr("src", "resources/" + plc + "/" + plc + ".jpg");
+      lbl.attr("src", "resources/" + plc + "/" + plc + "-lbl-1.png");
+      img.css({
+         "height": h,
+         "width": w,
+         "top": top,
+         "left": left
+      });
+
+      if (lbl){
+         lbl.css({
+               "height": h,
+               "width": w,
+               "top": top,
+               "left": left
+         });
+         lbl.click(function(){
+            let id = $(this).attr("id").replace("lbl", "div");
+            let offset = parseInt($("#" + id).offset().top) - 40;
+            $('html, body').animate({
+               scrollTop: offset
+            }, offset/4);
+         });
+      }
+   });
+}
 
 function showSign(){
     let el = $("#signature");
     el.fadeIn(500);
-    setTimeout(hideLayover, 1000);
+    setTimeout(() => {hideLayover(2000)}, 1000);
 }
 
-function hideLayover(){
-   $("#layover").fadeOut(2000);
-   $("#destination-list").css("display", "flex");
+function hideLayover(tm){
+   $("#layover").fadeOut(tm);
+   $(".outer-div").css("display", "flex");
+   //$("#destination-list").css("display", "flex");
 }
 
 let data = {
@@ -349,7 +371,7 @@ function showModalPic(first){
       a.attr("src", "resources/" + curr_id + "/" + curr_id + "_" + curr_pic_idx + ".jpg");
       setTimeout(function(){
          a.css("display", "block");
-         $(".modalCaption").text(curr_id + " " + curr_pic_idx);
+         $(".modalCaption").text(curr_id + " caption " + curr_pic_idx);
       }, 50);
    } else {
       let next =  curr_pic_idx % 2;
@@ -363,7 +385,7 @@ function showModalPic(first){
       b.fadeOut(250);
       setTimeout(function() {
          a.fadeIn(250);
-         $(".modalCaption").text(curr_id + " " + curr_pic_idx);
+         $(".modalCaption").text(curr_id + " caption " + curr_pic_idx);
       }, 220);
    }
    loadPicsToCache();
