@@ -255,11 +255,6 @@ $(window).resize(function(){
    showCollage();
 });
 
-$(window).on("load", function(){
-   $(".collage-img").css("display", "block");
-   $(".collage-lbl").css("display", "block");
-});
-
 function showCollage(){
    $(".blank").height(total_h);
    $(".collage-img").each(function(){
@@ -297,6 +292,10 @@ function showCollage(){
             }, offset/4);
          });
       }
+   });
+   $(window).on("load", function(){
+      $(".collage-img").css("display", "block");
+      $(".collage-lbl").css("display", "block");
    });
 }
 
