@@ -7,3 +7,5 @@ resources/.DS_Store
 /freelan
 compress.py
 /travel/resources/skardu/**
+!/travel/resources/skardu/skardu.jpg
+!/travel/resources/skardu/skardu-lbl-1.png
