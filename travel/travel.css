@@ -128,7 +128,7 @@ body {
 
 .collage-img {
     object-fit: fill;
-    border-color: white
+    border-color: white;
     border-width: 1px;
     border-style: solid;
 

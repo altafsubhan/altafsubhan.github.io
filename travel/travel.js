@@ -184,7 +184,7 @@ let total_w = $(window).width();
 let total_h = $(window).height();
 let curr_pic_idx = 1;
 let curr_id = "";
-let mobile;
+let mobile = false;
 
 $(document).ready(function(){
    let globe = $("#globe");
