@@ -121,14 +121,14 @@ body {
 #main-collage{
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: white;
     overflow: hidden;
     position: relative;
 }
 
 .collage-img {
     object-fit: fill;
-    border-color: black;
+    border-color: white
     border-width: 1px;
     border-style: solid;
 
@@ -138,7 +138,7 @@ body {
 
 .collage-lbl {
     object-fit: fill;
-    border-color: black;
+    border-color: white;
     border-width: 1px;
     border-style: solid;
 

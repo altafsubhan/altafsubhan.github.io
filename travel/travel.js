@@ -184,10 +184,12 @@ let total_w = $(window).width();
 let total_h = $(window).height();
 let curr_pic_idx = 1;
 let curr_id = "";
+let mobile;
 
 $(document).ready(function(){
    let globe = $("#globe");
    if( !(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
+      mobile = true;
       showCollage();
       let el = $("#text-container");
 
@@ -201,7 +203,7 @@ $(document).ready(function(){
       setTimeout(()=>{
          globe.css("display", "none");
          el.css("display", "block");
-         setTimeout(showSign, 3000);
+         setTimeout(showSign, 3500);
       }, 1500);
    } else {
       $(".inner-div").css("width", "100%");
@@ -252,7 +254,8 @@ $(document).ready(function(){
 $(window).resize(function(){
    total_h = $(window).height();
    total_w = $(window).width();
-   showCollage();
+   if (!mobile)
+      showCollage();
 });
 
 function showCollage(){
