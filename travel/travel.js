@@ -208,6 +208,9 @@ $(document).ready(function(){
    } else {
       $(".inner-div").css("width", "100%");
       $(".outer-div").css("flex-wrap", "wrap");
+      $(".dest-title").css("font-size", "xxx-large");
+      $(".dest-desc").css("font-size", "x-large");
+      $(".dest-container button").css("font-size", "x-large");
       setTimeout(function(){
          globe.fadeOut(500);
       }, 500);
@@ -219,8 +222,12 @@ $(document).ready(function(){
    $(".modal-content").css("margin-top", 0.1*total_h);
 
    $('.photos-btn').click(function(e){
-      fillContent(e.target.parentElement.id);
-      $('.modal').fadeIn(250);
+      if (e.target.parentElement.id == "toledo-btns")
+         window.open("toledo.html", "_self");
+      else {
+         fillContent(e.target.parentElement.id);
+         $('.modal').fadeIn(250);
+      }
    });
 
    $('.vlog-btn').click(function(e){
@@ -399,6 +406,15 @@ function showModalPic(first){
 function loadPicsToCache(){
    let idx = curr_pic_idx + 1;
    document.getElementById("cache").src = "resources/" + curr_id + "/" + curr_id + "_" + idx + ".jpg";
+}
+
+function updateImages(){
+   $(".dest-pic").each(function(){
+      let src = $(this).attr("src");
+      let num = parseInt(src.substr(-5)) + 1;
+      src = src.slice(0, -5) + num + ".jpg";
+      //$(this).attr("src", src);
+   });
 }
 
 /*

@@ -354,6 +354,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 #left-div {
@@ -381,7 +382,8 @@ body {
 .dest-pic {
     width: 95%;
     margin: auto;
-    max-height: 1000px;
+    object-fit: contain;
+    max-height: 700px;
 }
 
 .dest-desc-div {
@@ -439,4 +441,96 @@ body {
 .dest-container button:hover {
     cursor: pointer;
     opacity: 1;
+}
+
+.dest-body{
+    background-color: rgba(237, 199, 183, 0.25);
+    width: 100%;
+    display: block;
+}
+
+.nav-bar {
+    width: 100%;
+    /*padding: 10px 5%;*/
+    display: flex;
+    justify-content: center;
+}
+
+.dest-page-title {
+    margin: 20px auto;
+    padding: 0 5%;
+    font-family: "Montserrat Hairline";
+    font-size: 3em;
+    color: black;
+}
+
+.dest-pg-btn-div {
+    width: 100%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dest-pg-btn {
+    padding: 0 10px 0 10px;
+}
+
+.dest-pg-btn h3 {
+    font-family: "Montserrat Ultralight";
+    font-size: 0.55em;
+    letter-spacing: .45em;
+    margin: 0;
+    text-align: center;
+    color: black;
+    /*color: rgb(224, 147, 58);*/
+}
+
+.dest-pg-btn h5 {
+    font-family: "Montserrat Hairline";
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    opacity: 0.75;
+    color: black;
+    /*color: rgb(224, 147, 58);*/
+}
+
+.dot-lite {
+    height: 3px;
+    width: 3px;
+    background-color: rgb(0, 0, 0, 1);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 7.5px;
+}
+
+.dest-pg-btn h3:hover, .dest-pg-btn h5:hover {
+    cursor: pointer;
+}
+
+.place-title {
+    font-family: "Montserrat Light";
+    font-size: 1.25em;
+    margin: 0;
+}
+
+.dest-txt-container {
+    background-color: white;
+    width: 94%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 7% 0;
+    text-align: left;
+
+    font-family: "Montserrat Ultralight";
+    outline: white solid 2px;
+    outline-offset: 3px;
+}
+
+.dest-txt-title {
+    font-size: 1.25em;
+    margin: 20px 2% 5px 2%;
 }
