@@ -4,6 +4,8 @@ A standalone deployment of the Wilshire home task board (originally served at
 `/wilshire` on the main site). This folder is fully self-contained so it can be
 hosted on its own domain — for example a free `*.vercel.app` domain.
 
+**Live:** https://wilshire-app.vercel.app
+
 ## What it is
 
 A lightweight, shared task tracker for home fixes, tasks, and priorities. It is a
