@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1f2937" />
+  <title>Wilshire &middot; Home Tasks</title>
+  <link rel="stylesheet" href="wilshire.css" />
+</head>
+<body>
+  <!-- Passcode gate -->
+  <div id="gate" class="gate hidden">
+    <form id="gate-form" class="gate-card">
+      <h1>Wilshire</h1>
+      <p>Enter the passcode to open the home board.</p>
+      <input id="gate-input" type="password" inputmode="numeric" autocomplete="off" placeholder="Passcode" />
+      <button type="submit">Unlock</button>
+      <span id="gate-error" class="gate-error"></span>
+    </form>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <span class="brand-mark">W</span>
+          <div>
+            <h1>Wilshire</h1>
+            <p class="tagline">Home fixes, tasks &amp; priorities</p>
+          </div>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Quick add -->
+      <section class="add-card">
+        <form id="add-form">
+          <input id="add-title" type="text" placeholder="What needs doing? (e.g. Fix leaky kitchen faucet)" required />
+          <div class="add-row">
+            <input id="add-category" type="text" placeholder="Area (optional)" list="category-list" />
+            <datalist id="category-list"></datalist>
+            <select id="add-priority" title="Priority">
+              <option value="high">High priority</option>
+              <option value="medium" selected>Medium priority</option>
+              <option value="low">Low priority</option>
+            </select>
+            <button type="submit">Add task</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Controls -->
+      <section class="controls">
+        <div class="filters" id="status-filters">
+          <button class="chip active" data-filter="active">Open</button>
+          <button class="chip" data-filter="all">All</button>
+          <button class="chip" data-filter="done">Done</button>
+        </div>
+        <div class="sort">
+          <label for="sort-by">Sort</label>
+          <select id="sort-by">
+            <option value="priority">Priority</option>
+            <option value="progress">Progress</option>
+            <option value="recent">Recently updated</option>
+          </select>
+        </div>
+      </section>
+
+      <div id="sync-note" class="sync-note"></div>
+      <section id="list" class="list"></section>
+      <p id="empty" class="empty hidden">Nothing here yet. Add your first task above.</p>
+    </main>
+
+    <footer class="footer">
+      <span>Shared board &middot; changes sync live between devices</span>
+      <button id="lock-btn" class="link-btn">Lock</button>
+    </footer>
+  </div>
+
+  <!-- Task card template -->
+  <template id="task-template">
+    <article class="task">
+      <div class="task-main">
+        <button class="status-toggle" title="Toggle done"></button>
+        <div class="task-body">
+          <div class="task-title-row">
+            <input class="task-title" type="text" />
+            <span class="priority-badge"></span>
+          </div>
+          <div class="task-meta">
+            <input class="task-category" type="text" placeholder="+ area" />
+            <select class="task-priority">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <select class="task-status">
+              <option value="todo">To do</option>
+              <option value="in_progress">In progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <div class="progress-row">
+            <input class="task-progress" type="range" min="0" max="100" step="5" />
+            <span class="progress-val"></span>
+          </div>
+          <textarea class="task-notes" rows="1" placeholder="Progress made / what's remaining..."></textarea>
+        </div>
+      </div>
+      <button class="delete-btn" title="Delete task">&times;</button>
+    </article>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="wilshire.js"></script>
+</body>
+</html>
